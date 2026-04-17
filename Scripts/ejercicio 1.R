@@ -1,28 +1,8 @@
 #####ANALISIS UC IRAG CATAMARCA#####
 
 ##(Dios nos ampare!!)####
-
-
-
-# Cargar librerías
-
-library(dplyr) #transformación de datos
-library(lubridate) #trabajo con fechas
-library(dlookr) #exploración de datos
-library(readr) #lectura de archivos
-library(readxl) #lectura de archivos. xlsx
-library(writexl) #exportar archivos .xlsx
-library(gt) # libreria para tablas 
-library(gtable) #libreria para tablas
-library(tidyr)
-if(!require(knitr)) install.packages("knitr") # Para que la tabla se vea linda
-if(!require(ggplot2)) install.packages("ggplot2")
-library(ggplot2)
-
-
-##LLAMAR BASE CON CODIGO Q LEA ACENTOS
-
-data <- read.csv2("bases/UC_IRAG_CATAMARCA_acentos.csv", sep=";", encoding="latin1")
+source("Scripts/Library.R")
+source("Scripts/Importar base.R")
 
 ### VER DATAFRAME
 
@@ -202,9 +182,9 @@ DATA_IRAG_GRUPEDAD <- DATA_IRAG %>%
    
    #1.Coloco nombres en lugar de los  1, 2 y 9 en variable PRESENCIA_COMORBILIDADEs en IRAG####   
    SEVERIDAD <- data_filtrada %>%
-     mutate(SIN_OXIGENO = if_else(OXIGENOTERAPIA_BAJO_FLUJO=1 |
-                                    OXIGENOTERAPIA_ALTO_FLUJO= 1|
-                                    VM= 1)~ SIN_OXIGENO= "",
+     mutate(SIN_OXIGENO <- if_else(OXIGENOTERAPIA_BAJO_FLUJO==1 |
+                                    OXIGENOTERAPIA_ALTO_FLUJO== 1|
+                                    VM== 1)~ SIN_OXIGENO== "",
             ELSE="1")
           
    
