@@ -11,3 +11,4 @@ library(gtable) #libreria para tablas
 library(tidyr)
 library(ggplot2)#tablas
 library(knitr)#tablas lindas
+#Librerias cargadas
