@@ -47,6 +47,7 @@ unique(data$CLASIFICACION_MANUAL)
 data_EVENTO<- data %>% filter(CLASIFICACION_MANUAL=="Infeccion respiratoria aguda grave (IRAG)"|
                                   CLASIFICACION_MANUAL=="IRAG extendida")
 
+
 unique(data_EVENTO$CLASIFICACION_MANUAL)
 
 ####SACO LOS DE 15 O MÄS AÑOS, los de 2024 y 2026 y los de SE53###
@@ -204,8 +205,8 @@ DATA_IRAG_GRUPEDAD <- DATA_IRAG %>%
      mutate(SIN_OXIGENO = if_else(OXIGENOTERAPIA_BAJO_FLUJO=1 |
                                     OXIGENOTERAPIA_ALTO_FLUJO= 1|
                                     VM= 1)~ SIN_OXIGENO= "",
-            ELSE="1"
-             
+            ELSE="1")
+          
    
    # 2. Verificar el cambio
    table(PRESENCIA_IRAG$PRESENCIA_COMORBILIDADES)
