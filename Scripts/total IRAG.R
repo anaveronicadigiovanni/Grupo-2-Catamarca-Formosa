@@ -2,5 +2,5 @@
 
 
 
-  total_irag <- sum(data$CLASIFICACION_MANUAL == "IRAG extendida", na.rm = TRUE)
+  total_irag <- sum(data$CLASIFICACION_MANUAL == "Infección respiratoria aguda grave (IRAG)", na.rm = TRUE)
   
