@@ -32,5 +32,5 @@ unique(data$RESULTADO)
 
 data <- data %>% filter(RESULTADO=="valido")
 
-unique(data_filtrada$RESULTADO)
+unique(data$RESULTADO)
 
