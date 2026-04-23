@@ -1,4 +1,4 @@
-####asigno nombre a PRESENCIA COMORBILIDADES"
+####asigno nombres a valores de PRESENCIA COMORBILIDADES"
 
  data <- data %>%
   mutate(PRESENCIA_COMORBILIDADES = case_match(PRESENCIA_COMORBILIDADES,
@@ -13,7 +13,7 @@ table(data$PRESENCIA_COMORBILIDADES)
 
 ###########CREO COLUMNA "SIN_OXIGENO"#########
 
-data <-data%>% mutate(SIN_OXIGENO=1)
+data <-data%>% mutate(CON_OXIGENO=1)
 
 ############## ASIGNO VALORES A COLUMNA SIN_OXIGENO ########
 
@@ -22,16 +22,42 @@ data <- data %>%
   mutate(CON_OXIGENO = if_else(OXIGENOTERAPIA_BAJO_FLUJO == 1 | 
                                  OXIGENOTERAPIA_ALTO_FLUJO == 1 | 
                                  VM == 1, 
-                               "1",   # Valor si se cumple (TRUE)
-                               "")) # Valor si NO se cumple (FALSE)
+                               "SI",   # Valor si se cumple (TRUE)
+                               "NO")) # Valor si NO se cumple (FALSE)
 
 # 2. Verificar el cambio
 table(data$CON_OXIGENO)
 
-##################EN IRAG##################
+###AGREGO COLUMNA DE OTRO_DX#######
 
 
-DATA_IRAG_CAFOUTI_SE <- DATA_IRAG %>% 
-  group_by(OXIGENOTERAPIA_BAJO_FLUJO, OXIGENOTERAPIA_ALTO_FLUJO, SEPI_FECHA_INTER,CUIDADO_INTENSIVO)  %>%  #agrupa las filas por cada valor distinto en las variables grupo etario y sexo 
-  summarise(CASOS = n())  #cuenta cuántas filas hay en cada grupo  y guarda el conteo en una columna llamada casos
-ungroup() # desagrupar los datos para evitar afectaciones posteriores
+data <- data %>%
+  mutate(OTRO_DX = if_else( DIAG_NEUMONIA== 1 | 
+                              DIAG_BRONQUIOLITIS== 1 |
+                              DIAG_SEPSIS==1|
+                              DIAG_SHOCK_SEPTICO == 1, 
+                               "",   # Valor si se cumple (TRUE)
+                               "1")) # Valor si NO se cumple (FALSE)
+
+# 2. Verificar el cambio
+table(data$OTRO_DX)
+
+########AGREGO VARIABLE VACUNA VRS############
+
+unique(data$VAC_VSR)
+
+data <- data %>%
+  mutate(VACUNA_VRS = case_match(VAC_VSR,
+                                                                 
+                                    "SE 36"~ "madre vacunada",
+                                     "SE 35"~ "madre vacunada",
+                                     "SE 34"~ "madre vacunada",  
+                                     "SE 33"~ "madre vacunada",                                                
+                                     "SE 32"~ "madre vacunada",
+                                     "SE DESCONOCIDA"~ "madre vacunada",
+                                      "SIN DATO" ~ "Sin dato",
+                                      "MADRE NO VACUNADA"~ "madre NO vacunada",
+                                      .default = NA_character_ ))
+
+
+table(data$VACUNA_VRS)
