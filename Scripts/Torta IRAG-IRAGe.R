@@ -2,15 +2,16 @@
 data_grafico <- data %>% 
   group_by(CLASIFICACION_MANUAL) %>%
   summarise(CASOS = n())%>%
-  ungroup() %>% #
-pivot_wider(names_from = CLASIFICACION_MANUAL, values_from =CASOS)##EXPANDO LA TABLA##
+  ungroup() 
+
 
 # 2. CreO el gráfico de TORTA###
-highchart() %>%
+torta<-highchart() %>%
   hc_chart(type = "pie") %>%
   hc_add_series(
     data = data_grafico,
-    hcaes(x = CLASIFICACION_MANUAL, y = 1),
+    type = "pie",
+    hcaes(name = CLASIFICACION_MANUAL, y = CASOS),
     name = "Proporción",
     colorByPoint = TRUE
   ) %>%
@@ -26,4 +27,5 @@ highchart() %>%
   hc_title(text = "Casos de UC IRAG según clasificación. HINEP. Año 2025") %>%
   hc_tooltip(pointFormat = "<b>{point.y}</b> casos<br/>{point.percentage:.1f}%")
 
+torta
 

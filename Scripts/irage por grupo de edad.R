@@ -2,12 +2,12 @@ data_irage<- data %>%
   filter(CLASIFICACION_MANUAL=="IRAG extendida")
 
 
-library(stringr)
 
 GRUPEDAD_IRAGE<- data_irage %>%
-  group_by(EDAD_UC_IRAG)%>% 
-  summarise(CASOS = n())%>%
-  ungroup()
+  group_by(EDAD_UC_IRAG, SEXO)%>% 
+    summarise(CASOS = n())%>%
+  ungroup()|>
+pivot_wider(names_from = SEXO, values_from = CASOS)
 
 ###ordeno de mnor a mayot edad"
 GRUPEDAD_IRAGE <- GRUPEDAD_IRAGE %>%
