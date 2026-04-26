@@ -13,6 +13,7 @@ unique(data$CLASIFICACION_MANUAL)
 data<- data %>% filter(EDAD_DIAGNOSTICO<15 & 
                                        SEPI_FECHA_INTER<53 &
                                        ANIO_FECHA_INTER==2025)
+data <-data |>filter(ID !=10477)
 
 ####CREO COLUMNA NUEVA: RESULTADO###
 
