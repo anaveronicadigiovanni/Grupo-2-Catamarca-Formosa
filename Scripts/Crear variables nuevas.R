@@ -11,22 +11,39 @@
 # 2. Verificar el cambio
 table(data$PRESENCIA_COMORBILIDADES)
 
-###########CREO COLUMNA "SIN_OXIGENO"#########
 
-data <-data%>% mutate(CON_OXIGENO=1)
+data <- data %>%
+  mutate(CON_OXIGENO = case_when(
+    OXIGENOTERAPIA_BAJO_FLUJO == 1 | 
+      OXIGENOTERAPIA_ALTO_FLUJO == 1 | 
+      VM == 1 ~ "SI",
+    .default = "NO"))
 
-############## ASIGNO VALORES A COLUMNA SIN_OXIGENO ########
+###########CREO COLUMNA "CON cafo vm"#########
+
+data <-data%>% mutate(CON_CAFO_VM="no")
+
+############## ASIGNO VALORES A COLUMNA con cafo vm########
 
  
+
 data <- data %>%
-  mutate(CON_OXIGENO = if_else(OXIGENOTERAPIA_BAJO_FLUJO == 1 | 
-                                 OXIGENOTERAPIA_ALTO_FLUJO == 1 | 
-                                 VM == 1, 
-                               "SI",   # Valor si se cumple (TRUE)
-                               "NO")) # Valor si NO se cumple (FALSE)
+  mutate(CON_CAFO_VM = case_when(
+    OXIGENOTERAPIA_ALTO_FLUJO == 1 | VM == 1 ~ "SI",
+    .default = "NO"
+  ))
 
 # 2. Verificar el cambio
-table(data$CON_OXIGENO)
+table(data$CON_CAFO_VM)
+
+#########SEVERIDAD #########
+
+#########AGREGO COLUMNA #######
+
+data<- data %>%
+  mutate(SEVERIDAD = case_when(CON_CAFO_VM == "SI" ~ "CAFO y/o VM",
+                                     CON_CAFO_VM == "NO"& CON_OXIGENO=="SI" ~ "Oxigeno Bajo Flujo",
+                                     CON_OXIGENO == "NO" ~ "Sin Oxígeno"))
 
 ###AGREGO COLUMNA DE OTRO_DX#######
 
