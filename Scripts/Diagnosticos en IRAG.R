@@ -15,7 +15,7 @@ tabla_grafico_DX <- tabla_DX_IRAG %>%
   filter(Prevalencia > 0) # Filtramos las que no tienen casos
 
 # 2. Generación del gráfico
-highchart() %>%
+grafico_dx_IRAG <- highchart() %>%
   hc_chart(type = "bar") %>% 
   hc_title(text = "Diagnósticos en Casos de IRAG") %>%
   hc_subtitle(text = "") %>%
@@ -37,3 +37,5 @@ highchart() %>%
     borderWidth = 0
   )) %>%
   hc_credits(enabled = TRUE, text = "Fuente: Elaboración propia en base a datos del SNVS 2.0")
+
+grafico_dx_IRAG

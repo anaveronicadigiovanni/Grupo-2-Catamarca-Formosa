@@ -78,3 +78,38 @@ data <- data %>%
 
 
 table(data$VACUNA_VRS)
+
+#########UNIFICO VSR###
+
+data <- data %>%
+  mutate(VRS = case_match(VSR_FINAL,
+                          
+                                 "VSR"~ "VSR",
+                                 "VSR A"~ "VSR",
+                                 "VSR B"~ "VSR",  
+                                 "Negativo"~ "Negativo",                                                
+                                 "Sin resultado"~ "",
+                                   .default = NA_character_ ))
+
+table(data$VRS)
+
+
+####UNIFICO FLU####
+
+data <- data %>%
+  mutate(FLU = case_match(INFLUENZA_FINAL,
+                          
+                          "Influenza A (sin subtipificar)"~ "FLU",
+                          "	Influenza A H1N1"~ "FLU",
+                          "Negativo"~ "Negativo",                                                
+                          "Sin resultado"~ "",
+                          .default = NA_character_ ))
+
+####unifico SARSCov 2#####
+
+data <- data %>%
+  mutate(SARS_COV_2 = case_match(COVID_19_FINAL,
+                                 "Positivo" ~ "SARSCov 2",
+                                 "Negativo" ~ "Negativo",
+                                 "Sin resultado" ~ "",
+                                  .default = NA_character_ ))

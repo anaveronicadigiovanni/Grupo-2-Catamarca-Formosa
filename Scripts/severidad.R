@@ -26,7 +26,7 @@ tabla_severidad <-highchart() %>%
     name = "Sin Oxígeno",
     color = "#006854") %>%
   hc_add_series(
-    data = tabla_severidad$`Oxígeno Bajo Flujo`,
+    data = tabla_severidad$`Oxigeno Bajo Flujo`,
     name = "Oxigeno Bajo Flujo",
     color = "#f7e859") %>%
    hc_add_series(
