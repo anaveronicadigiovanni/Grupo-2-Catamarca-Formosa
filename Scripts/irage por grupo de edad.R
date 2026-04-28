@@ -1,6 +1,4 @@
-data_irage<- data %>% 
-  filter(CLASIFICACION_MANUAL=="IRAG extendida")
-
+######Agrupo IRAGE por grupo de edad y sexo######
 
 
 GRUPEDAD_IRAGE<- data_irage %>%
@@ -42,6 +40,8 @@ curva_irage_sex <-highchart() %>%
     data = GRUPEDAD_IRAGE$`M`,
     name = "Masculino",
     color = "#9bc4e2") 
+
+###LlAmo a grafico###
 
 curva_irage_sex
 

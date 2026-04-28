@@ -5,7 +5,7 @@ curva_casos <- data %>% group_by(CLASIFICACION_MANUAL,SEPI_MIN_INTERNACION) %>%
   summarise(n = n()) %>%
   ungroup()
 
-#Completo tabla con las SE donde no hubo casos notificados. El número de casos se completa con 0
+#Completo tabla con las SE donde no hubo casos notificados. El número de casos se completa con 033
 
 curva_casos <- curva_casos %>% 
   complete(SEPI_MIN_INTERNACION = 1:53,
@@ -39,7 +39,7 @@ curva_casos_SE <-highchart() %>%
   hc_add_series(
     data = curva_casos_interactiva$`Infección respiratoria aguda grave (IRAG)`,
     name = "IRAG",
-    color = "#112151") %>%
+    color = "#112189") %>%
   hc_add_series(
     data = curva_casos_interactiva$`IRAG extendida`,
     name = "IRAGe",

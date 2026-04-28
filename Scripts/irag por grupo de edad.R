@@ -1,6 +1,4 @@
-data_irag<- data %>% 
-  filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)")
-
+######Agrupo por grupo de edad y sexo####
 
 
 
@@ -9,7 +7,7 @@ data_irag<- data %>%
   summarise(CASOS = n())%>%
 ungroup()
   
-  ###ordeno de mnor a mayot edad"
+  ###ordeno de mnor a mayor edad"
  GRUPEDAD_IRAG <- GRUPEDAD_IRAG %>%
  arrange(
    # Extraemos el número inicial, lo pasamos a numérico y multiplicamos por 12 si es año
@@ -42,7 +40,7 @@ ungroup()
      data = GRUPEDAD_IRAG$`M`,
      name = "Masculino",
      color = "#9bc4e2") 
- 
+ ###LLAMO AL GRAFICO###
  curva_irag_sex
  
  

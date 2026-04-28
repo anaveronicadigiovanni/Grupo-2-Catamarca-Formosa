@@ -84,9 +84,9 @@ table(data$VACUNA_VRS)
 data <- data %>%
   mutate(VRS = case_match(VSR_FINAL,
                           
-                                 "VSR"~ "VSR",
-                                 "VSR A"~ "VSR",
-                                 "VSR B"~ "VSR",  
+                                 "VSR"~ "POSITIVO",
+                                 "VSR A"~ "POSITIVO",
+                                 "VSR B"~ "POSITIVO",  
                                  "Negativo"~ "Negativo",                                                
                                  "Sin resultado"~ "Negativo",
                                    .default ="Negativo"))
@@ -99,10 +99,10 @@ table(data$VRS)
 data <- data %>%
   mutate(FLU = case_match(INFLUENZA_FINAL,
                           
-                          "Influenza A (sin subtipificar)"~ "FLU",
-                          "	Influenza A H1N1"~ "FLU",
-                          "Influenza B (sin linaje)"~ "FLU",
-                          "Influenza B Victoria"~ "FLU",
+                          "Influenza A (sin subtipificar)"~ "POSITIVO",
+                          "	Influenza A H1N1"~ "POSITIVO",
+                          "Influenza B (sin linaje)"~ "POSITIVO",
+                          "Influenza B Victoria"~ "POSITIVO",
                           "Negativo"~ "Negativo",                                                
                           "Sin resultado"~ "Negativo",
                           .default = "Negativo" ))
@@ -111,7 +111,7 @@ data <- data %>%
 
 data <- data %>%
   mutate(SARS_COV_2 = case_match(COVID_19_FINAL,
-                                 "Positivo" ~ "SARSCov 2",
+                                 "Positivo" ~ "POSITIVO",
                                  "Negativo" ~ "Negativo",
                                  "Sin resultado" ~ "Negativo",
                                   .default = "Negativo" ))

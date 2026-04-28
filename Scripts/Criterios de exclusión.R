@@ -35,3 +35,10 @@ data <- data %>% filter(RESULTADO=="valido")
 
 unique(data$RESULTADO)
 
+######Creo DATAFRAMES separados para IRAG e IRAGe#####
+
+data_irag<- data %>% 
+  filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)")
+
+data_irage<- data %>% 
+  filter(CLASIFICACION_MANUAL=="IRAG extendida")

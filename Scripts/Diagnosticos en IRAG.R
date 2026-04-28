@@ -1,5 +1,6 @@
 #####Diagnosticos en IRAG, HAgo tabla###
 
+
 tabla_DX_IRAG <- data_irag |>
   summarise(across(c(DIAG_NEUMONIA,DIAG_BRONQUIOLITIS,DIAG_SHOCK_SEPTICO,DIAG_SEPSIS,OTRO_DX), 
                    ~ round (mean(.x == 1, na.rm = TRUE) * 100))) |>
@@ -27,7 +28,7 @@ grafico_dx_IRAG <- highchart() %>%
   hc_add_series(
     data = tabla_grafico_DX$Prevalencia,
     name = "Porcentaje",
-    color = "#2c3e50", # Un azul oscuro elegante
+    color = "#2c3e90", # Un azul oscuro elegante
     showInLegend = FALSE
   ) %>%
   hc_plotOptions(bar = list(
@@ -37,5 +38,7 @@ grafico_dx_IRAG <- highchart() %>%
     borderWidth = 0
   )) %>%
   hc_credits(enabled = TRUE, text = "Fuente: Elaboración propia en base a datos del SNVS 2.0")
+
+##LLAMO GRAFICO
 
 grafico_dx_IRAG
