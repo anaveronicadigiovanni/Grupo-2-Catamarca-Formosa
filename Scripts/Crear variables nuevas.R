@@ -88,8 +88,8 @@ data <- data %>%
                                  "VSR A"~ "VSR",
                                  "VSR B"~ "VSR",  
                                  "Negativo"~ "Negativo",                                                
-                                 "Sin resultado"~ "",
-                                   .default = NA_character_ ))
+                                 "Sin resultado"~ "Negativo",
+                                   .default ="Negativo"))
 
 table(data$VRS)
 
@@ -101,9 +101,11 @@ data <- data %>%
                           
                           "Influenza A (sin subtipificar)"~ "FLU",
                           "	Influenza A H1N1"~ "FLU",
+                          "Influenza B (sin linaje)"~ "FLU",
+                          "Influenza B Victoria"~ "FLU",
                           "Negativo"~ "Negativo",                                                
-                          "Sin resultado"~ "",
-                          .default = NA_character_ ))
+                          "Sin resultado"~ "Negativo",
+                          .default = "Negativo" ))
 
 ####unifico SARSCov 2#####
 
@@ -111,5 +113,5 @@ data <- data %>%
   mutate(SARS_COV_2 = case_match(COVID_19_FINAL,
                                  "Positivo" ~ "SARSCov 2",
                                  "Negativo" ~ "Negativo",
-                                 "Sin resultado" ~ "",
-                                  .default = NA_character_ ))
+                                 "Sin resultado" ~ "Negativo",
+                                  .default = "Negativo" ))
