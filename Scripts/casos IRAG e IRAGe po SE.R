@@ -39,11 +39,11 @@ curva_casos_SE <-highchart() %>%
   hc_add_series(
     data = curva_casos_interactiva$`Infección respiratoria aguda grave (IRAG)`,
     name = "IRAG",
-    color = "#112189") %>%
+    color = "#8cccd3") %>%
   hc_add_series(
     data = curva_casos_interactiva$`IRAG extendida`,
     name = "IRAGe",
-    color = "#006854") 
+    color = "#00a3d1") 
 
 curva_casos_SE
 

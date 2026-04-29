@@ -1,27 +1,34 @@
 ---
-title: ""
-format: html
+title: "UC IRAG 2025"
+format: 
+ html:
+  theme: jeti
+  toc: true                # Habilita la tabla de contenidos
+  toc-title: "Índice de Contenidos"  # Título del índice
+  toc-depth: 4 
+              # Nivel de profundidad del índice (hasta h4)
+  toc-location: left       # Ubicación del índice (izquierda)
+  embed-resources: true   # Incluye imágenes en el documento 
 editor: visual
-execute: 
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
-
 ```{r}
-1 + 1
+source("Scripts/Library.R")
+source("Scripts/Importar base.R")
+source("Scripts/Crear variables nuevas.R")
+source("Scripts/Criterios de exclusión.R")
 ```
 
-You can add options to executable code like this
+## INTRODUCCION
+
+El Hospital Interzonal de Niños Eva Perón (HINEP), situado en la ciudad capital de la provincia de Catamarca es el único que cuenta con una UC IRAG en dicha provincia.\
+La implementación de la estrategia inició el mes de julio de 2024, impulsada y dirigida por el área de Vigilancia Epidemiológica de la Dirección Provincial de Epidemiología de Catamarca. Se buscó aprovechar y optimizar los circuitos ya existentes en dicho nosocomio, el cual ya realizaba la vigilancia universal por red de laboratorios de las Infecciones respiratorias agudas (IRA) virales en menores de 5 años.\
+Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad y detalle. Un análisis periódico de los mismos, en un apartado especial dentro de la información general que ya brindan los datos generales de las IRA, permite conocer con mayor precisión las particularidades de las IRAG en la población pediátrica de nuestra provincia.
+
+## CASOS SEGUN CLASIFICACIÓN
+
+En 2025 se notificaron `r total_casos` casos de UCIRAG, `total IRAG.R` de IRAG y `total IRAGe.R`de IRAGe
 
 ```{r}
-#| echo: false
-2 * 2
+source("Scripts/Torta IRAG-IRAGe.R")
 ```
-
-The `echo: false` option disables the printing of code (only output is displayed).

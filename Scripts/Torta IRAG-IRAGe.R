@@ -8,6 +8,10 @@ data_grafico <- data %>%
 # 2. CreO el gráfico de TORTA###
 torta<-highchart() %>%
   hc_chart(type = "pie") %>%
+  hc_colors(c( "#00a3d1", "#8cccd3"
+              )) %>%
+  hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
+             enabled = TRUE) %>% 
   hc_add_series(
     data = data_grafico,
     type = "pie",
