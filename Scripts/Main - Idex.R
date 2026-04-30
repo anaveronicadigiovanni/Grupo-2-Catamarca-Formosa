@@ -1,0 +1,18 @@
+
+
+source(Scripts/Library.R)
+source(Scripts/Importar base.R)
+source(Crear variables nuevas.R)    
+source(Criterios de exclusion.R)
+source(Torta IRAG-IRAGe.R)
+source(Casos IRAG e IRAGe po SE.R)
+source(Total casos.R)
+source(total IRAG.R)    
+source(total IRAGe.R)
+source(Torta IRAG-IRAGe.R)
+source(PRESENCIA O NO COMORBILIDADES IRAG.R)
+source(PRESENCIA O NO COMORBILIDADES IRAGe.R)
+source(Comorbilidades IRAG.R)
+source(Comorbilidades IRAGe.R)   
+source(severidad.R)
+source(virus por se.R)

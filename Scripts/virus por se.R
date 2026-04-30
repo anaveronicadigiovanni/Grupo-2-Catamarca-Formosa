@@ -50,3 +50,33 @@
   ###LLAMO GRAFICO
   Grafico_virus
   
+  ###Grafico de columnas apiladas(no funciona todavia)
+  Grafico_virus_columnas <-highchart() %>%
+    hc_chart(type= "column") %>%
+    hc_title(text = "Virus por SE en HINEP.Año 2025")%>%
+    hc_plotOptions(column = list(stacking = "normal",
+                                 pointPadding = 0.1,   
+                                 groupPadding = 0.05,  
+                                 borderWidth = 0)) %>%
+    hc_xAxis(
+      categories = VIRUS_SE_TABLA$SE, #categorías en eje X
+      title = list(text = "Semana epidemiológica")) %>%  #título del eje X) 
+    hc_yAxis(title= list(text="Casos notificados")) %>%
+    hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
+               enabled = TRUE) %>% 
+    hc_add_series(
+      data = VIRUS_SE_TABLA$`SARS_COV_2`,
+      name = "COVID",
+      color = "#8cccd3") %>%
+    hc_add_series(
+      data = VIRUS_SE_TABLA$`FLU`,
+      name = "FLU",
+      color = "#00a3d1") %>%
+  hc_add_series(
+    data = VIRUS_SE_TABLA$`VRS`,
+    name = "VSR",
+    color = "#1cccd9") 
+  
+  Grafico_virus_columnas
+  
+  
