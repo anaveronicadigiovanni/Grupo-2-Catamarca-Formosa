@@ -79,6 +79,11 @@ data <- data %>%
 
 table(data$VACUNA_VRS)
 
+####################################################
+
+#CREO VARIABLES PARA GRAFICOS DE VIRUS######
+
+
 #########UNIFICO VSR###
 
 data <- data %>%
@@ -115,3 +120,61 @@ data <- data %>%
                                  "Negativo" ~ "Negativo",
                                  "Sin resultado" ~ "Negativo",
                                   .default = "Negativo" ))
+####################################################################################
+
+data <- data %>%
+  mutate(Virus_sr = case_match(VSR_FINAL,
+                               
+                               "VSR"~ 1,
+                               "VSR A"~ 1,
+                               "VSR B"~ 1,  
+                               
+                               .default = 0 ))
+
+
+table(data$Virus_sr)
+
+
+########
+
+data <- data %>%
+  mutate(Virus_influenza = case_match(INFLUENZA_FINAL,
+                                      
+                                      "Influenza A (sin subtipificar)"~ 1,
+                                      "	Influenza A H1N1"~ 1,
+                                      "Influenza B (sin linaje)"~ 1,
+                                      "Influenza B Victoria"~ 1,
+                                      
+                                      .default = 0))
+
+table(data$Virus_influenza)
+
+#########
+
+data <- data %>%
+  mutate(covid = case_match(COVID_19_FINAL,
+                            "Positivo" ~ 1,
+                            .default =  ))
+
+table(data$covid)
+
+#######################
+
+data <- data %>%
+  mutate(NEGATIVOS = case_when(COVID_19_FINAL=="Negativo" & 
+                                 INFLUENZA_FINAL== "Negativo"& 
+                                 VSR_FINAL=="Negativo"
+                               ~ 1,
+                               .default = 0 ))
+
+table(data$NEGATIVOS)
+
+###CAMBIO LOS NOMBRES DE LAS ULTIMAS 4 VARIABLES
+
+data<-data |>
+  rename(
+ ## NUEVO_NOMBRE = nombre_viejo,
+    COVID = covid,
+    Influenza= Virus_influenza,
+    VSR = Virus_sr
+  )

@@ -1,3 +1,4 @@
+#####AGRUPAMOS por virus y Semana############
 
  VIRUS_SE_TABLA<-data |>
    group_by(FLU,VRS, SARS_COV_2,SEPI_FECHA_INTER)%>%
@@ -50,33 +51,84 @@
   ###LLAMO GRAFICO
   Grafico_virus
   
-  ###Grafico de columnas apiladas(no funciona todavia)
-  Grafico_virus_columnas <-highchart() %>%
-    hc_chart(type= "column") %>%
-    hc_title(text = "Virus por SE en HINEP.Año 2025")%>%
-    hc_plotOptions(column = list(stacking = "normal",
-                                 pointPadding = 0.1,   
-                                 groupPadding = 0.05,  
-                                 borderWidth = 0)) %>%
-    hc_xAxis(
-      categories = VIRUS_SE_TABLA$SE, #categorías en eje X
-      title = list(text = "Semana epidemiológica")) %>%  #título del eje X) 
-    hc_yAxis(title= list(text="Casos notificados")) %>%
-    hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
-               enabled = TRUE) %>% 
-    hc_add_series(
-      data = VIRUS_SE_TABLA$`SARS_COV_2`,
-      name = "COVID",
-      color = "#8cccd3") %>%
-    hc_add_series(
-      data = VIRUS_SE_TABLA$`FLU`,
-      name = "FLU",
-      color = "#00a3d1") %>%
-  hc_add_series(
-    data = VIRUS_SE_TABLA$`VRS`,
-    name = "VSR",
-    color = "#1cccd9") 
   
-  Grafico_virus_columnas
+  ############################################################################  
+  
+  
+  ###Grafico de columnas apiladas
+
+
+ 
+  
+  #Agrupamos y sumamos por Semana Epidemiológica (SEPI_FECHA_INT)
+  df_columnas_virus <- data %>%
+    mutate(SE = str_pad(SEPI_FECHA_INTER, #variable a normalizar
+                        width = 2, #cantidad de dígitos
+                        side = "left", #posición del número que se utilizará para "completar"
+                        pad = "0"))|> #número que se utilizará para "completar" |>
+   
+    group_by(SE)%>%
+    summarise(
+      Negativos = sum(NEGATIVOS, na.rm = TRUE),
+      COVID = sum(COVID, na.rm = TRUE),
+      Influenza = sum(Influenza, na.rm = TRUE),
+      VSR= sum(VSR, na.rm = TRUE))|>
+      #mutate(SE = str_pad(SEPI_FECHA_INTER, #variable a normalizar
+   #                       width = 2, #cantidad de dígitos
+   #                       side = "left", #posición del número que se utilizará para "completar"
+   #                       pad = "0")) #número que se utilizará para "completar"
+   # ) %>%
+    # Pasamos a formato largo para Highcharts
+    pivot_longer(
+      cols = -SE, 
+      names_to = "Virus", 
+      values_to = "Casos"
+    )
+
+  
+  # 2. Creamos el gráfico de columnas apiladas
+  hchart(
+    df_columnas_virus, 
+    "column", 
+    hcaes(x = SE, y = Casos, group = Virus)) %>%
+    hc_plotOptions(column = list(stacking = "normal")) %>%
+    hc_title(text = "Resultados de muestras para PCR por Semana Epidemiológica. HINEP. 2025") %>%
+    hc_xAxis(title = list(text = "Semana Epidemiológica")) %>%
+    hc_yAxis(title = list(text = "Total de Muestras / Casos"))|>
+  hc_colors(c("#E74C3C", "#3498DB", "#95A5A0", "#2ECC71"))
+   
+ #####################################
+  
+  #En otro orden de apilado############
+  
+  # 1. Agrupamos y sumamos
+  df_columnas_virus <- data %>%
+    mutate(SE = str_pad(SEPI_FECHA_INTER, width = 2, side = "left", pad = "0")) %>%
+    group_by(SE) %>%
+    summarise(
+      Negativos = sum(NEGATIVOS, na.rm = TRUE),
+      Influenza = sum(Influenza, na.rm = TRUE),
+      COVID = sum(COVID, na.rm = TRUE),
+      VSR = sum(VSR, na.rm = TRUE)
+    ) %>%
+    pivot_longer(
+      cols = -SE, 
+      names_to = "Virus", 
+      values_to = "Casos"
+    ) %>%
+    # CLAVE: Definir el orden. El primero (Negativos) va abajo.
+    mutate(Virus = factor(Virus, levels = c("Negativos", "Influenza", "COVID", "VSR")))
+  
+  # 2. Creamos el gráfico con los colores corregidos
+  hchart(
+    df_columnas_virus, 
+    "column", 
+    hcaes(x = SE, y = Casos, group = Virus)
+  ) %>%
+    hc_plotOptions(column = list(stacking = "normal")) %>%
+    hc_colors(c("#D3D3D3", "#2ECC71", "#3498DB", "#FFB347")) %>% # Gris, Verde, Celeste, Naranja
+    hc_title(text = "Resultados de muestras para PCR por Semana Epidemiológica. HINEP. 2025") %>%
+    hc_xAxis(title = list(text = "Semana Epidemiológica")) %>%
+    hc_yAxis(title = list(text = "Total de Muestras / Casos"))
   
   
