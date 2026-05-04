@@ -29,7 +29,20 @@ El Hospital Interzonal de Niños Eva Perón (HINEP), situado en la ciudad capita
 La implementación de la estrategia inició el mes de julio de 2024, impulsada y dirigida por el área de Vigilancia Epidemiológica de la Dirección Provincial de Epidemiología de Catamarca. Se buscó aprovechar y optimizar los circuitos ya existentes en dicho nosocomio, el cual ya realizaba la vigilancia universal por red de laboratorios de las Infecciones respiratorias agudas (IRA) virales en menores de 5 años.\
 Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad y detalle. Un análisis periódico de los mismos, en un apartado especial dentro de la información general que ya brindan los datos generales de las IRA, permite conocer con mayor precisión las particularidades de las IRAG en la población pediátrica de nuestra provincia.
 
-## CASOS SEGUN CLASIFICACIÓN
+## CASOS SEGUN CLASIFICACIÓN[^1]
+
+[^1]: Definiciones de Caso:
+    * **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con:
+        * Fiebre referida o constatada >= 38°C y Tos; y
+        * Inicio del cuadro en los 10 días precedentes; y
+        * Requerimiento de internación por criterio clínico.
+    * **Infección Respiratoria Aguda Grave (IRAG) extendida en < 2 años y >= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e
+        * Inicio del cuadro en los 10 días precedentes; y
+        * Requerimiento de internación por criterio clínico.
+    * **En lactantes menores de 6 meses también considerar:**
+        * Apnea (cese temporal de la respiración por cualquier causa).
+        * Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
+
 
 En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
 
