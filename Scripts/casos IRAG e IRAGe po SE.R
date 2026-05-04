@@ -23,21 +23,21 @@ curva_casos <- curva_casos %>% mutate(SE = str_pad(SEPI_MIN_INTERNACION, #variab
 curva_casos_interactiva <- curva_casos %>% pivot_wider(names_from = CLASIFICACION_MANUAL,
                                                           values_from = n)
 
-curva_casos_SE <-highchart() %>%
-  hc_chart(type= "column") %>%
-  hc_title(text = "Casos de IRAG e IRAGe por SE en HINEP.Año 2025")%>%
+curva_casos_SE <- highchart() %>%
+  hc_chart(type = "column") %>%
+  hc_title(text = enc2utf8("Casos de IRAG e IRAGe por SE en HINEP. Año 2025")) %>%
   hc_plotOptions(column = list(stacking = "normal",
                                pointPadding = 0.1,   
                                groupPadding = 0.05,  
                                borderWidth = 0)) %>%
   hc_xAxis(
-    categories = curva_casos_interactiva$SE, #categorías en eje X
-    title = list(text = "Semana epidemiológica")) %>%  #título del eje X) 
-  hc_yAxis(title= list(text="Casos notificados")) %>%
-  hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
+    categories = curva_casos_interactiva$SE,
+    title = list(text = enc2utf8("Semana epidemiológica"))) %>% 
+  hc_yAxis(title = list(text = "Casos notificados")) %>%
+  hc_credits(text = enc2utf8("Fuente: Elaboración propia en base a datos del SNVS 2.0"), 
              enabled = TRUE) %>% 
   hc_add_series(
-    data = curva_casos_interactiva$`Infección respiratoria aguda grave (IRAG)`,
+    data = curva_casos_interactiva$`Infeccion respiratoria aguda grave (IRAG)`,
     name = "IRAG",
     color = "#8cccd3") %>%
   hc_add_series(
@@ -46,7 +46,6 @@ curva_casos_SE <-highchart() %>%
     color = "#00a3d1") 
 
 curva_casos_SE
-
 
   
 

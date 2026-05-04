@@ -30,7 +30,7 @@ highchart() %>%
   hc_add_series(
     data = tabla_grafico$Prevalencia,
     name = "Porcentaje",
-    color = "#2c3e50", # Un azul oscuro elegante
+    color = "#2c3e50", # Un azul oscuro 
     showInLegend = FALSE
   ) %>%
   hc_plotOptions(bar = list(

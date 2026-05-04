@@ -1,5 +1,5 @@
 ---
-title: "UC IRAG 2025"
+title: ""
 format: 
  html:
   theme: jeti
@@ -9,12 +9,16 @@ format:
               # Nivel de profundidad del índice (hasta h4)
   toc-location: left       # Ubicación del índice (izquierda)
   embed-resources: true   # Incluye imágenes en el documento 
+  echo: false
+  message: false
+  warning: false
+  
 editor: visual
 ---
 
 ```{r}
 source("Scripts/Library.R")
-source("Scripts/Importar base.R")
+source("Scripts/Importar base.R", encoding = "UTF-8")
 source("Scripts/Crear variables nuevas.R")
 source("Scripts/Criterios de exclusión.R")
 ```
@@ -27,8 +31,13 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 
 ## CASOS SEGUN CLASIFICACIÓN
 
-En 2025 se notificaron `r total_casos` casos de UCIRAG, `total IRAG.R` de IRAG y `total IRAGe.R`de IRAGe
+En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe. 
 
 ```{r}
 source("Scripts/Torta IRAG-IRAGe.R")
+source("Scripts/casos IRAG e IRAGe po SE.R")
+```
+
+```{r}
+curva_casos_SE
 ```
