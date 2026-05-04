@@ -37,7 +37,7 @@ curva_casos_SE <- highchart() %>%
   hc_credits(text = enc2utf8("Fuente: Elaboración propia en base a datos del SNVS 2.0"), 
              enabled = TRUE) %>% 
   hc_add_series(
-    data = curva_casos_interactiva$`Infeccion respiratoria aguda grave (IRAG)`,
+    data = curva_casos_interactiva$`Infección respiratoria aguda grave (IRAG)`,
     name = "IRAG",
     color = "#8cccd3") %>%
   hc_add_series(
