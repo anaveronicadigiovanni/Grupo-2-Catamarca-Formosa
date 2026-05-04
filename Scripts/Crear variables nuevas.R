@@ -1,8 +1,4 @@
 
-data <- data |>
-  mutate(CLASIFICACION_MANUAL = stri_trans_general(CLASIFICACION_MANUAL, "Latin-ASCII"))
-
-
 
 ####asigno nombres a valores de PRESENCIA COMORBILIDADES"
 
