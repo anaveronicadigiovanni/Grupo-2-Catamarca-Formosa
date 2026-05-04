@@ -2,7 +2,7 @@
 
 ####SACO LOS QUE SON INVALIDADOS POR EPIDEMIOLOGIA###
 
-data<- data %>% filter(CLASIFICACION_MANUAL=="Infeccion respiratoria aguda grave (IRAG)"|
+data<- data %>% filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)"|
                                 CLASIFICACION_MANUAL=="IRAG extendida")
 
 
@@ -38,7 +38,7 @@ unique(data$RESULTADO)
 ######Creo DATAFRAMES separados para IRAG e IRAGe#####
 
 data_irag<- data %>% 
-  filter(CLASIFICACION_MANUAL=="Infeccion respiratoria aguda grave (IRAG)")
+  filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)")
 
 data_irage<- data %>% 
   filter(CLASIFICACION_MANUAL=="IRAG extendida")
@@ -51,7 +51,7 @@ total_casos <- nrow(data)
 ####objeto para total IRAG###
 
 
-total_irag <- sum(data$CLASIFICACION_MANUAL == "Infeccion respiratoria aguda grave (IRAG)", na.rm = TRUE)
+total_irag <- sum(data$CLASIFICACION_MANUAL == "Infección respiratoria aguda grave (IRAG)", na.rm = TRUE)
 
 ####total de casos de IRAGe#
 
