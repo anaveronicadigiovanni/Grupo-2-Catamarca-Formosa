@@ -18,7 +18,7 @@ editor: visual
 
 ```{r}
 source("Scripts/Library.R")
-source("Scripts/Importar base.R", encoding = "UTF-8")
+source("Scripts/Importar base.R")
 source("Scripts/Crear variables nuevas.R")
 source("Scripts/Criterios de exclusión.R")
 ```
@@ -31,7 +31,7 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 
 ## CASOS SEGUN CLASIFICACIÓN
 
-En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe. 
+En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
 
 ```{r}
 source("Scripts/Torta IRAG-IRAGe.R")
