@@ -15,5 +15,6 @@ library(highcharter) #graficos interactivos
 library(stringr)
 library(here)
 library(stringi)
+
 #Librerias cargadas##
  
