@@ -31,18 +31,7 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 
 ## CASOS SEGUN CLASIFICACIÓN[^1]
 
-[^1]: Definiciones de Caso:
-    * **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con:
-        * Fiebre referida o constatada >= 38°C y Tos; y
-        * Inicio del cuadro en los 10 días precedentes; y
-        * Requerimiento de internación por criterio clínico.
-    * **Infección Respiratoria Aguda Grave (IRAG) extendida en < 2 años y >= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e
-        * Inicio del cuadro en los 10 días precedentes; y
-        * Requerimiento de internación por criterio clínico.
-    * **En lactantes menores de 6 meses también considerar:**
-        * Apnea (cese temporal de la respiración por cualquier causa).
-        * Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
-
+[^1]: Definiciones de Caso: \* **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con: \* Fiebre referida o constatada \>= 38°C y Tos; y \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años y \>= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **En lactantes menores de 6 meses también considerar:** \* Apnea (cese temporal de la respiración por cualquier causa). \* Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
 En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
 
