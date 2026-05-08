@@ -5,7 +5,7 @@
 
 
  data <- data %>%
-  mutate(PRESENCIA_COMORBILIDADES = case_match(PRESENCIA_COMORBILIDADES,
+  mutate(PRESENCIA_COMORBILIDADES = case_when(PRESENCIA_COMORBILIDADES,
                                                1 ~ "Con comorbilidades",
                                                2 ~ "Sin comorbilidades",
                                                9 ~ "Sin dato",  
