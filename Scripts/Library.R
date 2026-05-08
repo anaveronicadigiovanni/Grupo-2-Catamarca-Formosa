@@ -1,5 +1,6 @@
 #CARGAR LIBRERIAS#
 
+
 library(dplyr) #transformación de datos
 library(lubridate) #trabajo con fechas
 library(dlookr) #exploración de datos
@@ -18,3 +19,4 @@ library(stringi)
 
 #Librerias cargadas##
  
+
