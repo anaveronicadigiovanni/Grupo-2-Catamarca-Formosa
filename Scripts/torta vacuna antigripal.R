@@ -1,4 +1,16 @@
+# GRAFICO DE TORTA PARA VACUNA ANTIGRIPAL EN NIÑOS DE 6 A 23 MESES
+# FILTRO NIÑOS DE 6 A 23 MESES
 VACUNA_ANTIGRIPAL<- data %>% filter(EDAD_UC_IRAG %in% c("6 a 11 Meses", "12 a 23 Meses"))
+
+#UNIFICAMOS VACUNA ANTIGRIPAL CONSTATADA Y REFERIDA COMO VACUNA ANTIGRIPAL VACUNADA
+VACUNA_ANTIGRIPAL <- data %>%
+  mutate(VAC_ANTIGRIPAL = case_match(VAC_ANTIGRIPAL,
+                                        
+                                        "CONSTATADA"~ "Vacunado",
+                                        "REFERIDA"~ "Vacunado",
+                                        "SIN DATO" ~ "Sin dato",
+                                        "NO VACUNADO"~ "No vacunado",
+                                        .default = NA_character_ ))
 
 # 1. Preparamos los datos 
 data_grafico <- VACUNA_ANTIGRIPAL %>% 
@@ -9,7 +21,7 @@ data_grafico <- VACUNA_ANTIGRIPAL %>%
 # 2. CreO el gráfico de TORTA2###
 torta2<-highchart() %>%
   hc_chart(type = "pie") %>%
-  hc_colors(c( "#00a3d1", "#8cccd3","#9bc4e2", "#f9a58c"
+  hc_colors(c( "#00a3d1", "#8cccd3", "#f9a58c"
   )) %>%
   hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
              enabled = TRUE) %>% 
