@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "ANALISIS UC IRAG HINEP 2025"
 format: 
  html:
   theme: jeti
@@ -39,7 +39,23 @@ En 2025 se notificaron `r total_casos` casos que cumplieron con la definición p
 source("Scripts/Torta IRAG-IRAGe.R")
 source("Scripts/casos IRAG e IRAGe po SE.R")
 ```
-
+```{r}
+torta
+```
 ```{r}
 curva_casos_SE
 ```
+
+## CASOS SEGUN GRUPO ETARIO Y SEXO
+```{r}
+source("Scripts/irag por grupo de edad.R")
+source("Scripts/irage por grupo de edad.R")
+```
+
+
+En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
+```{r}
+curva_irage_sex
+curva_irag_sex
+```
+
