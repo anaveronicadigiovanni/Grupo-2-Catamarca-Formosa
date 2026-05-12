@@ -1,8 +1,19 @@
+#####CÓDIGO PARA NO TENER PROBLEMAS CON Ñ o ACENTOS
+
+data_irag_limpio <- data_irag %>%
+  mutate(across(where(is.character), ~ {
+    # Convierte a UTF-8 nativo y escapa los elementos no válidos
+    x_enc <- iconv(.x, to = "UTF-8", sub = " ")
+    # Codificación estricta para asegurar compatibilidad HTML/JSON
+    utf8::utf8_encode(x_enc)
+  }))
+
+
 ######Agrupo por grupo de edad y sexo####
 
 
 
-  GRUPEDAD_IRAG<- data_irag %>%
+  GRUPEDAD_IRAG<- data_irag_limpio %>%
   group_by(EDAD_UC_IRAG, SEXO)%>% 
   summarise(CASOS = n())%>%
 ungroup()

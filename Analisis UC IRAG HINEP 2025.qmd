@@ -1,5 +1,5 @@
 ---
-title: "ANALISIS UC IRAG HINEP 2025"
+title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves HINEP Catamarca, año 2025"
 format: 
  html:
   theme: jeti
@@ -29,7 +29,9 @@ El Hospital Interzonal de Niños Eva Perón (HINEP), situado en la ciudad capita
 La implementación de la estrategia inició el mes de julio de 2024, impulsada y dirigida por el área de Vigilancia Epidemiológica de la Dirección Provincial de Epidemiología de Catamarca. Se buscó aprovechar y optimizar los circuitos ya existentes en dicho nosocomio, el cual ya realizaba la vigilancia universal por red de laboratorios de las Infecciones respiratorias agudas (IRA) virales en menores de 5 años.\
 Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad y detalle. Un análisis periódico de los mismos, en un apartado especial dentro de la información general que ya brindan los datos generales de las IRA, permite conocer con mayor precisión las particularidades de las IRAG en la población pediátrica de nuestra provincia.
 
-## CASOS SEGUN CLASIFICACIÓN[^1]
+## CARACTERIZACIÓN DE LOS CASOS
+
+### Casos según Clasificación (definición de caso)[^1]
 
 [^1]: Definiciones de Caso: \* **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con: \* Fiebre referida o constatada \>= 38°C y Tos; y \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años y \>= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **En lactantes menores de 6 meses también considerar:** \* Apnea (cese temporal de la respiración por cualquier causa). \* Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
@@ -39,21 +41,25 @@ En 2025 se notificaron `r total_casos` casos que cumplieron con la definición p
 source("Scripts/Torta IRAG-IRAGe.R")
 source("Scripts/casos IRAG e IRAGe po SE.R")
 ```
+
 ```{r}
 torta
 ```
+
+###Casos según Semana Epidemiológica y clasificación
 ```{r}
 curva_casos_SE
 ```
 
-## CASOS SEGUN GRUPO ETARIO Y SEXO
+### Casos según grupo etario y sexo
+
 ```{r}
 source("Scripts/irag por grupo de edad.R")
 source("Scripts/irage por grupo de edad.R")
 ```
 
-
 En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
+
 ```{r}
 curva_irage_sex
 curva_irag_sex
