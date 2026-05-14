@@ -1,5 +1,6 @@
 ---
-title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves HINEP Catamarca, año 2025"
+title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves /
+HINEP Catamarca - Año 2025-"
 format: 
  html:
   theme: jeti
@@ -47,6 +48,7 @@ torta
 ```
 
 ###Casos según Semana Epidemiológica y clasificación
+
 ```{r}
 curva_casos_SE
 ```
@@ -64,4 +66,3 @@ En los casos de notificados como IRAGe , se puede observar un predominio de pobl
 curva_irage_sex
 curva_irag_sex
 ```
-

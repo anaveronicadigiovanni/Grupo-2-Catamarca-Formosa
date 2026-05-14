@@ -7,3 +7,4 @@ data$CLASIFICACION_MANUAL <- iconv(data$CLASIFICACION_MANUAL, from = "latin1", t
 
 
 AGRUPADOS <-read_excel("Bases/UC IRAG-Carga_agrupada-Catamarca.xlsx")
+
