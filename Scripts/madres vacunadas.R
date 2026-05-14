@@ -21,7 +21,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>% group_by(VACUNA_VRS,VAC_ANTIG_MATERN
   summarise(n = n()) %>%
   ungroup()
 
-# 1. Preparamos los datos con limpieza de texto
+# 3. Preparamos los datos con limpieza de texto
 tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
   select(VACUNA_VRS, VAC_ANTIG_MATERNA) %>% 
   pivot_longer(cols = everything(), names_to = "Vacuna", values_to = "Estado") %>%
@@ -37,7 +37,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
     TRUE ~ Vacuna
   ))
 
-# 2. Armamos el gráfico
+# 4. Armamos el gráfico
 vacunas_madres_grafico<- highchart() %>%
   hc_chart(type = "column") %>%
   hc_title(text = "Vacunación Materna en niños menores de 6 meses") %>%
