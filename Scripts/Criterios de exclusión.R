@@ -1,12 +1,10 @@
-###APLICO CRITERIOS DE EXCLUSIÓN#####
+###APLICO CRITERIOS DE EXCLUSIÓN####
 
 ####SACO LOS QUE SON INVALIDADOS POR EPIDEMIOLOGIA###
 
-data<- data %>% filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)"|
-                                CLASIFICACION_MANUAL=="IRAG extendida")
-
-
-unique(data$CLASIFICACION_MANUAL)
+data <- data %>% 
+  filter(CLASIFICACION_MANUAL=="Infección respiratoria aguda grave (IRAG)"|
+           CLASIFICACION_MANUAL=="IRAG extendida")
 
 ####SACO LOS DE 15 O MÄS AÑOS, los de 2024 y 2026 y los de SE53###
 

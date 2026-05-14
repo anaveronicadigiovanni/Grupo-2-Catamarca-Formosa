@@ -1,12 +1,12 @@
-# --- SCRIPT PRINCIPAL (Main / Index) --- (todavia no funciona bien)
+# --- SCRIPT PRINCIPAL (Main / Index) --- (YA FUNCIONA!)
 
 # 1. Configuración inicial y carga de datos
 source("Scripts/Library.R")
-source("Scripts/Importar base.R")
+source("Scripts/Importar base.R", encoding = "UTF-8")
 
 # 2. Procesamiento de datos y filtros
 source("Scripts/Crear variables nuevas.R")    
-source("Scripts/Criterios de exclusión.R")
+source("Scripts/Criterios de exclusión.R", encoding = "UTF-8")
 
 # 3. Análisis de Casos y Semanas (SE)
 source("Scripts/Casos IRAG e IRAGe po SE.R")

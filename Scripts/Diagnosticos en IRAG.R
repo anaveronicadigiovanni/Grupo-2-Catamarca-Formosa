@@ -28,7 +28,7 @@ grafico_dx_IRAG <- highchart() %>%
   hc_add_series(
     data = tabla_grafico_DX$Prevalencia,
     name = "Porcentaje",
-    color = "#2c3e90", # Un azul oscuro elegante
+    color = "#2c3e90", # azul
     showInLegend = FALSE
   ) %>%
   hc_plotOptions(bar = list(
