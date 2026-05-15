@@ -32,8 +32,8 @@ vacunas_madres_grafico<- highchart() %>%
   hc_title(text = "Vacunación Materna en niños menores de 6 meses") %>%
   hc_plotOptions(column = list(
     stacking = "percent", 
-    borderWidth = 0,
-    dataLabels = list(enabled = TRUE, format = "{point.percentage:.1f}%")
+    borderWidth = 0
+    #dataLabels = list(enabled = TRUE, format = "{point.percentage:.1f}%")
   )) %>%
   hc_xAxis(categories = unique(tabla_grafico$Vacuna)) %>%
   hc_yAxis(title = list(text = "Porcentaje (%)"), max = 100) %>%
