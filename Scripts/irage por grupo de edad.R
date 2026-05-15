@@ -28,11 +28,11 @@ GRUPEDAD_IRAGE <- GRUPEDAD_IRAGE %>%
 #tabla a lo ancho####
  pivot_wider(names_from = SEXO, values_from = CASOS)
 
-###Grafico columnas agrupadas
+
 
 curva_irage_sex <-highchart() %>%
-  hc_chart(type= "column") %>%
-  hc_title(text = "Distribución de Casos Notificados de IRAGe por Sexo y Grupo Etario") %>% 
+  hc_chart(type= "bar") %>%
+ # hc_title(text = "Distribución de Casos Notificados de IRAGe por Sexo y Grupo Etario") %>% 
   hc_plotOptions(column = list(stacking = NULL,
                                pointPadding = 0.05,   
                                groupPadding = 0.1,  
@@ -56,4 +56,26 @@ curva_irage_sex <-highchart() %>%
 
 curva_irage_sex
 
-
+###Grafico columnas agrupadas
+# curva_irage_sex <-highchart() %>%
+#   hc_chart(type= "column") %>%
+#   hc_title(text = "Distribución de Casos Notificados de IRAGe por Sexo y Grupo Etario") %>% 
+#   hc_plotOptions(column = list(stacking = NULL,
+#                                pointPadding = 0.05,   
+#                                groupPadding = 0.1,  
+#                                borderWidth = 0)) %>%
+#   hc_xAxis(
+#     categories =GRUPEDAD_IRAGE$EDAD_UC_IRAG, #categorías en eje X
+#     title = list(text = "Grupo etario")) %>%  #título del eje X) 
+#   hc_yAxis(title= list(text="Casos notificados")) %>%
+#   hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
+#              enabled = TRUE) %>% 
+#   hc_add_series(
+#     data = GRUPEDAD_IRAGE$`F`,
+#     name = "Femenino",
+#     color = "#f9a58c") %>%
+#   hc_add_series(
+#     data = GRUPEDAD_IRAGE$`M`,
+#     name = "Masculino",
+#     color = "#9bc4e2") 
+# 
