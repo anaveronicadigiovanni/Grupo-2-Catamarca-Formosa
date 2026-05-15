@@ -3,17 +3,6 @@
 NIÑOS_MENORES_6_MESES<- data %>% filter(EDAD_UC_IRAG %in% c("0 a 2 Meses", "3 a 5 Meses"))
 
 
-data <- data %>%
-  mutate(VAC_ANTIG_MATERNA = case_match(VAC_ANTIGRIPAL_MATERNA,
-                                        
-                                        "CONSTATADA"~ "madre vacunada",
-                                        "REFERIDA"~ "madre vacunada",
-                                        "SIN DATO" ~ "Sin dato",
-                                        "MADRE NO VACUNADA"~ "madre no vacunada",
-                                        .default = NA_character_ ))
-library (purrr)
-
-
 #2 Creo data frame para grafico de madres vacunadas en menores de 6 meses###
 
 

@@ -63,6 +63,16 @@ data <- data %>%
 # 2. Verificar el cambio
 table(data$OTRO_DX)
 
+#UNIFICAMOS VACUNA ANTIGRIPAL CONSTATADA Y REFERIDA COMO VACUNA ANTIGRIPAL VACUNADA
+VACUNA_ANTIGRIPAL <- data %>%
+  mutate(VAC_ANTIGRIPAL = case_match(VAC_ANTIGRIPAL,
+                                     
+                                     "CONSTATADA"~ "Vacunado",
+                                     "REFERIDA"~ "Vacunado",
+                                     "SIN DATO" ~ "Sin dato",
+                                     "NO VACUNADO"~ "No vacunado",
+                                     .default = NA_character_ ))
+
 ########AGREGO VARIABLE VACUNA VRS############
 
 unique(data$VAC_VSR)
@@ -82,6 +92,18 @@ data <- data %>%
 
 
 table(data$VACUNA_VRS)
+
+########AGREGO VARIABLE VACUNA antigripal materna############
+
+
+data <- data %>%
+  mutate(VAC_ANTIG_MATERNA = case_match(VAC_ANTIGRIPAL_MATERNA,
+                                        
+                                        "CONSTATADA"~ "madre vacunada",
+                                        "REFERIDA"~ "madre vacunada",
+                                        "SIN DATO" ~ "Sin dato",
+                                        "MADRE NO VACUNADA"~ "madre no vacunada",
+                                        .default = NA_character_ ))
 
 ####################################################
 

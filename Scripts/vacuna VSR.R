@@ -1,4 +1,6 @@
-# FILTRO NIÑOS DE 0 A 5 MESES
+#### GRAFICO DE PRUEBA!!!!!!!!!!!
+
+# FILTRO NIÑOS DE 0 A 5 MESES### 
 
 
 VACUNA_VSR <- data %>% filter(EDAD_UC_IRAG %in% c("0 a 2 Meses", "3 a 5 Meses"))

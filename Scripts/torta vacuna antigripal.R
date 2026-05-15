@@ -2,15 +2,7 @@
 # FILTRO NIÑOS DE 6 A 23 MESES
 VACUNA_ANTIGRIPAL<- data %>% filter(EDAD_UC_IRAG %in% c("6 a 11 Meses", "12 a 23 Meses"))
 
-#UNIFICAMOS VACUNA ANTIGRIPAL CONSTATADA Y REFERIDA COMO VACUNA ANTIGRIPAL VACUNADA
-VACUNA_ANTIGRIPAL <- data %>%
-  mutate(VAC_ANTIGRIPAL = case_match(VAC_ANTIGRIPAL,
-                                        
-                                        "CONSTATADA"~ "Vacunado",
-                                        "REFERIDA"~ "Vacunado",
-                                        "SIN DATO" ~ "Sin dato",
-                                        "NO VACUNADO"~ "No vacunado",
-                                        .default = NA_character_ ))
+
 
 # 1. Preparamos los datos 
 data_grafico <- VACUNA_ANTIGRIPAL %>% 
