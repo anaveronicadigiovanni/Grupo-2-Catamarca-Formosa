@@ -13,7 +13,7 @@ data_grafico <- VACUNA_ANTIGRIPAL %>%
 # 2. CreO el gráfico de TORTA2###
 torta2<-highchart() %>%
   hc_chart(type = "pie") %>%
-  hc_colors(c( "#00a3d1", "#8cccd3", "#f9a58c"
+  hc_colors(c( "#ffb777", "#fc4f59", "#93c6e0"
   )) %>%
   hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
              enabled = TRUE) %>% 
@@ -33,6 +33,6 @@ torta2<-highchart() %>%
       )
     )
   ) %>%
-  hc_title(text = "Niños de 6 a 23 meses con vacunación antigripal. HINEP. Año 2025") %>%
+  #hc_title(text = "Niños de 6 a 23 meses con vacunación antigripal. HINEP. Año 2025") %>%
   hc_tooltip(pointFormat = "<b>{point.y}</b> casos<br/>{point.percentage:.1f}%")
 torta2
