@@ -1,6 +1,5 @@
 ---
-title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves /
-HINEP Catamarca - Año 2025-"
+title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves pediátricas en Catamarca. Año 2025"
 format: 
  html:
   theme: jeti
@@ -19,9 +18,9 @@ editor: visual
 
 ```{r}
 source("Scripts/Library.R")
-source("Scripts/Importar base.R")
+source("Scripts/Importar base.R", encoding = "UTF-8")
 source("Scripts/Crear variables nuevas.R")
-source("Scripts/Criterios de exclusión.R")
+source("Scripts/Criterios de exclusión.R", encoding = "UTF-8" )
 ```
 
 ## INTRODUCCION
@@ -39,15 +38,15 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
 
 ```{r}
-source("Scripts/Torta IRAG-IRAGe.R")
-source("Scripts/casos IRAG e IRAGe po SE.R")
+source("Scripts/Torta IRAG-IRAGe.R", encoding = "UTF-8")
+source("Scripts/casos IRAG e IRAGe po SE.R", encoding = "UTF-8")
 ```
 
 ```{r}
 torta
 ```
 
-###Casos según Semana Epidemiológica y clasificación
+### Casos según Semana Epidemiológica y clasificación
 
 ```{r}
 curva_casos_SE
@@ -56,8 +55,8 @@ curva_casos_SE
 ### Casos según grupo etario y sexo
 
 ```{r}
-source("Scripts/irag por grupo de edad.R")
-source("Scripts/irage por grupo de edad.R")
+source("Scripts/irag por grupo de edad.R" , encoding = "UTF-8")
+source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 ```
 
 En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
