@@ -19,7 +19,7 @@ editor: visual
 ```{r}
 source("Scripts/Library.R")
 source("Scripts/Importar base.R", encoding = "UTF-8")
-source("Scripts/Crear variables nuevas.R", encoding = "uft-8")
+source("Scripts/Crear variables nuevas.R", encoding = "UTF-8")
 source("Scripts/Criterios de exclusión.R", encoding = "UTF-8" )
 ```
 
