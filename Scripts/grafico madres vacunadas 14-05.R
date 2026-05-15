@@ -58,6 +58,6 @@ vacunas_madres_grafico<- highchart() %>%
     data = (tabla_grafico %>% filter(Estado == "sin dato"))$n, 
     name = "Sin Dato", color = "#fc4f59"
   )
-#ver grafic
+#ver grafico
 
 vacunas_madres_grafico
