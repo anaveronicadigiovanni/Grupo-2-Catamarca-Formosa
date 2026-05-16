@@ -67,8 +67,14 @@ source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 
 En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
 
-
+###### Gráfico n° 3:
 ```{r}
 curva_irage_sex
+```
+
+
+###### Gráfico n° 4:
+```{r}
 curva_irag_sex
 ```
+
