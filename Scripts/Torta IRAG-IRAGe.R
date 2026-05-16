@@ -28,7 +28,7 @@ torta<-highchart() %>%
       )
     )
   ) %>%
-  hc_title(text = "Casos de UC IRAG según clasificación. HINEP. Año 2025") %>%
+ # hc_title(text = "Casos de UC IRAG según clasificación. HINEP. Año 2025") %>%
   hc_tooltip(pointFormat = "<b>{point.y}</b> casos<br/>{point.percentage:.1f}%")
 
 torta
