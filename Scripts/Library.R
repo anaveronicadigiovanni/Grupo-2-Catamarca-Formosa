@@ -8,7 +8,9 @@ library(readr) #lectura de archivos
 library(readxl) #lectura de archivos. xlsx
 library(writexl) #exportar archivos .xlsx
 library(gt) # libreria para tablas 
-library(gtable) #libreria para tablas
+library(gtable) #libreria para tablaslibrary(gt)
+library(gtExtras)
+
 library(tidyr)
 library(ggplot2)#tablas
 library(knitr)#tablas lindas
