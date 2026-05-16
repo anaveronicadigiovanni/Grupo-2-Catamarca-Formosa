@@ -25,7 +25,7 @@ curva_casos_interactiva <- curva_casos %>% pivot_wider(names_from = CLASIFICACIO
 
 curva_casos_SE <- highchart() %>%
   hc_chart(type = "column") %>%
-  hc_title(text = enc2utf8("Casos de IRAG e IRAGe por SE en HINEP. Año 2025")) %>%
+  #hc_title(text = enc2utf8("Casos de IRAG e IRAGe por SE en HINEP. Año 2025")) %>%
   hc_plotOptions(column = list(stacking = "normal",
                                pointPadding = 0.1,   
                                groupPadding = 0.05,  

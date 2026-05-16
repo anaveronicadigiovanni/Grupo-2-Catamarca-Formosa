@@ -1,18 +1,18 @@
 ---
-title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves pediátricas en Catamarca. Año 2025"
+title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves pediátricas en Catamarca (UC IRAG)  . Año 2025"
 format: 
  html:
   theme: jeti
   toc: true                # Habilita la tabla de contenidos
   toc-title: "Índice de Contenidos"  # Título del índice
-  toc-depth: 4 
+  toc-depth: 6
               # Nivel de profundidad del índice (hasta h4)
   toc-location: left       # Ubicación del índice (izquierda)
   embed-resources: true   # Incluye imágenes en el documento 
   echo: false
   message: false
   warning: false
-  
+  lang: es
 editor: visual
 ---
 
@@ -33,7 +33,7 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 
 ### Casos según Clasificación (definición de caso)[^1]
 
-[^1]: Definiciones de Caso: \* **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con: \* Fiebre referida o constatada \>= 38°C y Tos; y \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años y \>= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **En lactantes menores de 6 meses también considerar:** \* Apnea (cese temporal de la respiración por cualquier causa). \* Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
+[^1]: [***Definiciones de Caso***]{.underline}: \* **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con: \* Fiebre referida o constatada \>= 38°C y Tos; y \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años y \>= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **En lactantes menores de 6 meses también considerar:** \* Apnea (cese temporal de la respiración por cualquier causa). \* Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
 En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
 
@@ -42,11 +42,17 @@ source("Scripts/Torta IRAG-IRAGe.R", encoding = "UTF-8")
 source("Scripts/casos IRAG e IRAGe po SE.R", encoding = "UTF-8")
 ```
 
+###### Gráfico n° 1: Distribución porcentual de casos notificados según clasificación manual. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+
 ```{r}
 torta
 ```
 
 ### Casos según Semana Epidemiológica y clasificación
+
+A continuación podemos observar la curva epidemiológica con una notoria distribución estacional de los casos
+
+###### Gráfico n° 2: Distribución temporal de casos notificados según clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`
 
 ```{r}
 curva_casos_SE
@@ -60,6 +66,7 @@ source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 ```
 
 En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
+
 
 ```{r}
 curva_irage_sex
