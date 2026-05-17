@@ -79,7 +79,7 @@ curva_irage_sex
 curva_irag_sex
 ```
 
-## COMORBILIDADES en CASOS DE UC IRAG 
+## COMORBILIDADES en CASOS DE UC IRAG
 
 ```{r}
 source("Scripts/PRESENCIA O NO COMORBILIDADES IRAG.R" , encoding = "UTF-8")
@@ -104,10 +104,10 @@ En la siguiente tabla se puede observar cuales fueron las comorbilidades registr
 tabla_comorb_IRAG
 ```
 
-
 En cuanto a los casos de IRAGe, de los `r total_irage` casos, `r comorb_irage` (una proporción menor que en las IRAG) presentaron comorbilidades.
 
-###### Gráfico n°6:  Registro/presencia de comorbilidades en casos notificados de IRAGe. Año 2025. HINEP- Catamarca. N =`r total_irage  `
+###### Gráfico n°6:  Registro/presencia de comorbilidades en casos notificados de IRAGe. Año 2025. HINEP- Catamarca. N =`r total_irage`
+
 ```{r}
 torta_comorbilidades_IRAGe
 ```
@@ -115,11 +115,13 @@ torta_comorbilidades_IRAGe
 A continuación, se evidencia que las comorbilidades en IRAGe son diferentes a las de las IRAG.
 
 ###### Tabla n°2:  Comorbilidades registradas en casos notificados de IRAGe. Año 2025. HINEP- Catamarca.
+
 ```{r}
 tabla_comorb_IRAGE
 ```
 
-## DIAGNÓSTICOS en CASOS DE UC IRAG 
+## DIAGNÓSTICOS en CASOS DE UC IRAG
+
 ```{r}
 source("Scripts/Diagnosticos en IRAG.R" , encoding = "UTF-8")
 source("Scripts/Diagnosticos en IRAGe.R" , encoding = "UTF-8")
@@ -128,13 +130,15 @@ source("Scripts/Diagnosticos en IRAGe.R" , encoding = "UTF-8")
 La clasificación de IRAG e IRAGe no son en si mismas un diagnóstico, sino un criterio epidemiológico de inclusión a la Unidad Centinela. Se pueden observar diferencias en los diagnósticos registrados al ingreso de cada caso, según la Clasificación asignada.
 
 ###### Tabla n°4:  Diagnósticos al ingreso en casos notificados de IRAG. Año 2025. HINEP- Catamarca.
+
 ```{r}
 tabla_dx_IRAG
 ```
 
 ###### Tabla n°5:  Diagnósticos al ingreso en casos notificados de IRAGe. Año 2025. HINEP- Catamarca
+
 ```{r}
 tabla_DX_IRAGe
 ```
 
-Cabe aclarar que en la categoría "otro Diag
+Cabe aclarar que en la categoría "Otros Diagnósticos" no permite ingresar en el SNVS de cuales se trata. En el caso de la UC IRAG del HINEP, en gran parte corresponden a **SBOR** (Sindrome Bronquial Obstructivo Recurrente) y a **SDRA** (Sindrome de distress respiratorio agudo).
