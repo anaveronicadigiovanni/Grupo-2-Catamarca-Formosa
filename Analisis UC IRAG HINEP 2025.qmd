@@ -103,3 +103,19 @@ En la siguiente tabla se puede observar cuales fueron las comorbilidades registr
 ```{r}
 tabla_comorb_IRAG
 ```
+
+
+En cuanto a los casos de IRAGe, de los `r total_irage` casos, `r comorb_irage` (una proporción menor que en las IRAG) presentaron comorbilidades.
+
+###### Gráfico n°6:  Registro/presencia de comorbilidades en casos notificados de IRAGe. Año 2025. HINEP- Catamarca. N =`r total_irage  `
+```{r}
+torta_comorbilidades_IRAGe
+```
+
+A continuación, se evidencia que las comorbilidades en IRAGe son diferentes a las de las IRAG.
+
+###### Tabla n°2:  Comorbilidades registradas en casos notificados de IRAGe. Año 2025. HINEP- Catamarca.
+```{r}
+tabla_comorb_IRAGE
+```
+
