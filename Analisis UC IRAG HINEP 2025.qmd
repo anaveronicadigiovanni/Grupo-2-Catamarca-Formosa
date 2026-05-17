@@ -79,7 +79,7 @@ curva_irage_sex
 curva_irag_sex
 ```
 
-### CASOS DE UC IRAG Y COMORBILIDADES
+## COMORBILIDADES en CASOS DE UC IRAG 
 
 ```{r}
 source("Scripts/PRESENCIA O NO COMORBILIDADES IRAG.R" , encoding = "UTF-8")
@@ -119,3 +119,22 @@ A continuación, se evidencia que las comorbilidades en IRAGe son diferentes a l
 tabla_comorb_IRAGE
 ```
 
+## DIAGNÓSTICOS en CASOS DE UC IRAG 
+```{r}
+source("Scripts/Diagnosticos en IRAG.R" , encoding = "UTF-8")
+source("Scripts/Diagnosticos en IRAGe.R" , encoding = "UTF-8")
+```
+
+La clasificación de IRAG e IRAGe no son en si mismas un diagnóstico, sino un criterio epidemiológico de inclusión a la Unidad Centinela. Se pueden observar diferencias en los diagnósticos registrados al ingreso de cada caso, según la Clasificación asignada.
+
+###### Tabla n°4:  Diagnósticos al ingreso en casos notificados de IRAG. Año 2025. HINEP- Catamarca.
+```{r}
+tabla_dx_IRAG
+```
+
+###### Tabla n°5:  Diagnósticos al ingreso en casos notificados de IRAGe. Año 2025. HINEP- Catamarca
+```{r}
+tabla_DX_IRAGe
+```
+
+Cabe aclarar que en la categoría "otro Diag
