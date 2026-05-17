@@ -2,17 +2,21 @@
 
 ##1- Creo la tabla#
 PRES_COMORB<-data_irag |>
-  group_by(PRESENCIA_COMORBILIDADES)%>% 
+  group_by(PRESENCIA_COMORBILIDADES_texto)%>% 
   summarise(CASOS = n())%>%
   ungroup()
+
+comorb_irag<-PRES_COMORB %>%
+  filter(PRESENCIA_COMORBILIDADES_texto == "Con comorbilidades") %>%
+  pull(CASOS)
 
 # Asignar los colores específicos a cada categoría en tus datos
 
 PRES_COMORB_COLORES <- PRES_COMORB %>%
   mutate(color = case_when(
-    PRESENCIA_COMORBILIDADES == "Con comorbilidades" ~ "#ffb777",
-    PRESENCIA_COMORBILIDADES == "Sin comorbilidades" ~ "#93c6e0",
-    PRESENCIA_COMORBILIDADES == "Sin datos"           ~ "#a6a6a6", # Gris medio
+    PRESENCIA_COMORBILIDADES_texto == "Con comorbilidades" ~ "#ffb777",
+    PRESENCIA_COMORBILIDADES_texto == "Sin comorbilidades" ~ "#93c6e0",
+    PRESENCIA_COMORBILIDADES_texto == "Sin datos"           ~ "#a6a6a6", # Gris medio
     TRUE ~ "#d3d3d3" # Gris claro por si hay otra categoría inesperada
   ))
 
@@ -24,7 +28,7 @@ torta_comorbilidades_IRAG <- highchart() %>%
   hc_add_series(
     data = PRES_COMORB_COLORES, # Usamos el dataset con la nueva columna 'color'
     type = "pie",
-    hcaes(name = PRESENCIA_COMORBILIDADES, y = CASOS, color = color), # Mapeamos 'color = color'
+    hcaes(name = PRESENCIA_COMORBILIDADES_texto, y = CASOS, color = color), # Mapeamos 'color = color'
     name = "Proporción",
     colorByPoint = TRUE
   ) %>%

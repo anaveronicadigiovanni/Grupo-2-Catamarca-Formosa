@@ -5,7 +5,7 @@
 
 
  data <- data %>%
-  mutate(PRESENCIA_COMORBILIDADES = case_match(PRESENCIA_COMORBILIDADES,
+  mutate(PRESENCIA_COMORBILIDADES_texto = case_match(PRESENCIA_COMORBILIDADES,
                                                1 ~ "Con comorbilidades",
                                                2 ~ "Sin comorbilidades",
                                                9 ~ "Sin dato",  
@@ -13,7 +13,7 @@
 
 
 # 2. Verificar el cambio
-table(data$PRESENCIA_COMORBILIDADES)
+table(data$PRESENCIA_COMORBILIDADES_texto)
 
 
 data <- data %>%
