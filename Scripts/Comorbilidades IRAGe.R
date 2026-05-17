@@ -68,7 +68,7 @@ tabla_comorb_IRAGE <- tabla_comorb_irage %>%
   # Resaltar con colores los valores más altos basados en el porcentaje
   gt_color_rows(
     columns = Rel, 
-    palette = c("#ffffff", "#2c3e90") # Va de blanco a tu azul según el porcentaje
+    palette = c("#ffffff", "#ffb117") # Va de blanco a naranja según el porcentaje
   ) %>%
   
   # Nota al pie de página con la fuente
