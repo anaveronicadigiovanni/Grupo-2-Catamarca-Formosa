@@ -23,13 +23,46 @@ tabla_comorbilidades_IRAG <- data_irag |>
   ) |>
   arrange(desc(Abs))
 
-# 2. Limpieza, filtrado y formato de texto
+# 2. Limpieza, filtrado y corrección de nombres con acentos/abreviaturas
 tabla_comorb_irag <- tabla_comorbilidades_IRAG %>%
   mutate(
     Comorbilidades = str_replace_all(Comorbilidades, "_", " "),
-    Comorbilidades = str_to_sentence(Comorbilidades)
+    Comorbilidades = str_to_sentence(Comorbilidades),
+    
+    # Reemplazo exacto de nombres y agregado de acentos
+    Comorbilidades = case_match(
+      Comorbilidades,
+      "Dbp" ~ "Displasia broncopulmonar",
+      "Vih" ~ "VIH",
+      "S down" ~ "Síndrome de Down",
+      "Diabetes" ~ "Diabetes",
+      "Bajo peso nacimiento" ~ "Bajo peso al nacimiento",
+      "Asma" ~ "Asma",
+      "Tuberculosis" ~ "Tuberculosis",
+      "Prematuridad" ~ "Prematuridad",
+      "Enf respiratoria" ~ "Enfermedad respiratoria",
+      "Cardiopatia congenita" ~ "Cardiopatía congénita",
+      "Asplenia" ~ "Asplenia",
+      "Desnutricion" ~ "Desnutrición",
+      "Cancer" ~ "Cáncer",
+      "Trasplantado" ~ "Trasplantado",
+      "Bronquiolitis previa" ~ "Bronquiolitis previa",
+      "Enf neurologica cronica" ~ "Enfermedad neurológica crónica",
+      "Enf hepatica" ~ "Enfermedad hepática",
+      "Hipertension" ~ "Hipertensión",
+      "Enf cerebrovascular" ~ "Enfermedad cerebrovascular",
+      "Enf neuromuscular" ~ "Enfermedad neuromuscular",
+      "Discapacidad intelectual" ~ "Discapacidad intelectual",
+      "Enf cardiaca" ~ "Enfermedad cardíaca",
+      "Enf reumatologica" ~ "Enfermedad reumatológica",
+      "Enf renal" ~ "Enfermedad renal",
+      "Obesidad" ~ "Obesidad",
+      "Inmunocomprometido otras causas" ~ "Inmunocomprometido por otras causas",
+      "Otras comorbilidades" ~ "Otras comorbilidades",
+      .default = Comorbilidades # Si hay alguna que no coincide, mantiene el original
+    )
   ) %>%
-  filter(Abs > 0) # Filtramos las que no tienen casos absolutos
+  filter(Abs > 0)
 
 # 3. Generación de la tabla gt con ambas columnas
 tabla_comorb_IRAG <- tabla_comorb_irag %>%
