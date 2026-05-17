@@ -1,5 +1,5 @@
 ---
-title: "Análisis de la Unidad Centinela de Infecciones Respiratoria Agudas Graves pediátricas en Catamarca (UC IRAG)  . Año 2025"
+title: "Análisis de la Unidad Centinela de Infecciones Respiratorias Agudas Graves pediátricas en Catamarca     (UC IRAG). Año 2025"
 format: 
  html:
   theme: jeti
@@ -42,7 +42,7 @@ source("Scripts/Torta IRAG-IRAGe.R", encoding = "UTF-8")
 source("Scripts/casos IRAG e IRAGe po SE.R", encoding = "UTF-8")
 ```
 
-###### Gráfico n° 1: Distribución porcentual de casos notificados según clasificación manual. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+###### Gráfico n° 1: Distribución porcentual de casos notificados por clasificación manual. Año 2025 . HINEP - Catamarca. N= `r total_casos`
 
 ```{r}
 torta
@@ -52,7 +52,7 @@ torta
 
 A continuación podemos observar la curva epidemiológica con una notoria distribución estacional de los casos
 
-###### Gráfico n° 2: Distribución temporal de casos notificados según clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+###### Gráfico n° 2: Distribución temporal de casos notificados por clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`
 
 ```{r}
 curva_casos_SE
@@ -65,16 +65,41 @@ source("Scripts/irag por grupo de edad.R" , encoding = "UTF-8")
 source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 ```
 
-En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios.A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
+En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios. A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
 
-###### Gráfico n° 3:
+###### Gráfico n° 3: Distribución de los casos de IRAGe por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irage`
+
 ```{r}
 curva_irage_sex
 ```
 
+###### Gráfico n° 4: Distribución de los casos de IRAG por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irag`
 
-###### Gráfico n° 4:
 ```{r}
 curva_irag_sex
 ```
 
+### CASOS DE UC IRAG Y COMORBILIDADES
+
+```{r}
+source("Scripts/PRESENCIA O NO COMORBILIDADES IRAG.R" , encoding = "UTF-8")
+source("Scripts/PRESENCIA O NO COMORBILIDADES IRAGe.R" , encoding = "UTF-8")
+source("Scripts/Comorbilidades IRAG.R" , encoding = "UTF-8")
+source("Scripts/Comorbilidades IRAGe.R" , encoding = "UTF-8")
+```
+
+La influencia de las comorbilidades en la ocurrencia de casos que IRA que requieren internación es un tema muy presente en la bibliografía. En los `r total_irag` ingresos de IRAG del HINEP durante el año 2025, `r comorb_irag` presentaron alguna comorbilidad.
+
+###### Gráfico n°5:  Registro/presencia de comorbilidades en casos notificados de IRAG. Año 2025. HINEP- Catamarca. N =`r total_irag`
+
+```{r}
+torta_comorbilidades_IRAG
+```
+
+En la siguiente tabla se puede observar cuales fueron las comorbilidades registradas en los casos clasificados como IRAG.
+
+###### Tabla n°1:  Comorbilidades registradas en casos notificados de IRAG. Año 2025. HINEP- Catamarca.
+
+```{r}
+tabla_comorb_IRAG
+```

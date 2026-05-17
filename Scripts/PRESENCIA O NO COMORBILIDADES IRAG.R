@@ -1,4 +1,4 @@
-##########Presencia comorbilidades IRAGe#
+##########Presencia comorbilidades IRAG#
 
 ##1- Creo la tabla#
 PRES_COMORB<-data_irag |>

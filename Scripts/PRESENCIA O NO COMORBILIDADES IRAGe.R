@@ -7,7 +7,7 @@ PRES_COMORB_IRAGE<-data_irage |>
   ungroup()
 
 #####asigno colores
-PRES_COMORB_COLORES2 <- PRES_COMORB %>%
+PRES_COMORB_COLORES2 <- PRES_COMORB_IRAGE %>%
   mutate(color = case_when(
     PRESENCIA_COMORBILIDADES_texto == "Con comorbilidades" ~ "#ffb777",
     PRESENCIA_COMORBILIDADES_texto == "Sin comorbilidades" ~ "#93c6e0",
