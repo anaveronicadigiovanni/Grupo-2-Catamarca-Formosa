@@ -6,6 +6,11 @@ PRES_COMORB_IRAGE<-data_irage |>
   summarise(CASOS = n())%>%
   ungroup()
 
+####creo objeto total comorbilidades en irage
+comorb_irage<-PRES_COMORB_IRAGE %>%
+  filter(PRESENCIA_COMORBILIDADES_texto == "Con comorbilidades") %>%
+  pull(CASOS)
+
 #####asigno colores
 PRES_COMORB_COLORES2 <- PRES_COMORB_IRAGE %>%
   mutate(color = case_when(

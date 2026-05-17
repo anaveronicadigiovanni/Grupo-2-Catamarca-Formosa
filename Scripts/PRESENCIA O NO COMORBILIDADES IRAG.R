@@ -6,6 +6,7 @@ PRES_COMORB<-data_irag |>
   summarise(CASOS = n())%>%
   ungroup()
 
+####creo objeto total comorbilidades en irage
 comorb_irag<-PRES_COMORB %>%
   filter(PRESENCIA_COMORBILIDADES_texto == "Con comorbilidades") %>%
   pull(CASOS)
