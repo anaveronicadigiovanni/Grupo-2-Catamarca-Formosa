@@ -34,7 +34,7 @@
   # 
 
   
-  Grafico_virus_columnas <- highchart() %>%
+  Grafico_agrupados <- highchart() %>%
     hc_chart(type = "column") %>%
     hc_plotOptions(column = list(stacking = "percent")) %>% 
     hc_add_series(
@@ -59,5 +59,6 @@
   
   # 3. LLAMO AL GRÁFICO
   
-  Grafico_virus_columnas
+  Grafico_agrupados
    
+  

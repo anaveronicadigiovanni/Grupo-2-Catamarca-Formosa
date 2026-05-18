@@ -190,10 +190,19 @@ En los menores de 6 meses, se evaluó la proporción de madres que contaban con 
 vacunas_madres_grafico
 ```
 
-En cuanto a los casos de 6 a 23 meses, se constató la colocación de la vacuna antigripal según el calendario nacional. El siguiente gráfico muestra los resultados. 
+En cuanto a los casos de 6 a 23 meses, se constató la colocación de la vacuna antigripal según el calendario nacional. El siguiente gráfico muestra los resultados.
 
 ###### *Gráfico n° 10: Estado de vacunación para Influenza en los casos de UC IRAG con edades entre 6 y 23 meses. Año 2025 . HINEP - Catamarca. N= `r CASOS6m_23m`*
 
 ```{r}
 torta2
 ```
+
+
+```{r}
+source("Scripts/agrupados.R" , encoding = "UTF-8")
+```
+```{r}
+  Grafico_agrupados
+```
+
