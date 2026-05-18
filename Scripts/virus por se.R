@@ -70,7 +70,7 @@
   #   group_by(SE)%>%
   #   summarise(
   #     Negativos = sum(NEGATIVOS, na.rm = TRUE),
-  #     COVID = sum(COVID, na.rm = TRUE),
+  #    SARS_CoV_2 = sum(COVID, na.rm = TRUE),
   #     Influenza = sum(Influenza, na.rm = TRUE),
   #     VSR= sum(VSR, na.rm = TRUE))|>
       #mutate(SE = str_pad(SEPI_FECHA_INTER, #variable a normalizar
@@ -108,7 +108,7 @@
     summarise(
       Negativos = sum(NEGATIVOS, na.rm = TRUE),
       Influenza = sum(Influenza, na.rm = TRUE),
-      COVID = sum(COVID, na.rm = TRUE),
+     SARS_CoV_2 = sum(SARS_CoV_2, na.rm = TRUE),
       VSR = sum(VSR, na.rm = TRUE)
     ) %>%
     pivot_longer(
@@ -117,7 +117,9 @@
       values_to = "Casos"
     ) %>%
     # CLAVE: Definir el orden. El primero (Negativos) va abajo.
-    mutate(Virus = factor(Virus, levels = c("Negativos", "Influenza", "COVID", "VSR")))
+    mutate(Virus = factor(Virus, levels = c("Negativos", "Influenza", "SARS_CoV_2", "VSR")))|>
+  # Reemplaza los guiones bajos por espacios en los nombres que verá Highcharts
+     mutate(Virus = factor(gsub("_", " ", Virus), levels = c("Negativos", "Influenza", "SARS CoV 2", "VSR")))
   
   # 2. Creamos el gráfico con los colores corregidos
   grafico_virus<-hchart(

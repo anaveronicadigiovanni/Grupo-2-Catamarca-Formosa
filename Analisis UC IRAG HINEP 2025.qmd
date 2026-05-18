@@ -142,3 +142,16 @@ tabla_DX_IRAGe
 ```
 
 Cabe aclarar que en la categoría "Otros Diagnósticos" no permite ingresar en el SNVS de cuales se trata. En el caso de la UC IRAG del HINEP, en gran parte corresponden a **SBOR** (Sindrome Bronquial Obstructivo Recurrente) y a **SDRA** (Sindrome de distress respiratorio agudo).
+
+## RESULTADOS DE LAS DETERMINACIONES PARA VIRUS RESPIRATORIOS
+
+```{r}
+source("Scripts/virus por se.R" , encoding = "UTF-8")
+```
+A todos los ingresos de la UC IRAG se les toma una muestra para identificar, mediante pruebas moleculares (PCR), la infección por virus Influenza, Sars-Cov-2 o Virus Sincicial Respiratorio (VSR). A continuación se detallan los resultados.
+
+###### Gráfico n° 7: Resultados de las determinaciones en para Virus respiratorios, según SE de ingreso. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+```{r}
+grafico_virus
+```
+

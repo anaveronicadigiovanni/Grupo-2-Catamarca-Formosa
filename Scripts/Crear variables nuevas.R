@@ -212,7 +212,7 @@ table(data$NEGATIVOS)
 data<-data |>
   rename(
  ## NUEVO_NOMBRE = nombre_viejo,
-    COVID = covid,
+    SARS_CoV_2= covid,
     Influenza= Virus_influenza,
     VSR = Virus_sr
   )
