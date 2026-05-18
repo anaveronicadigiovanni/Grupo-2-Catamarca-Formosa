@@ -42,7 +42,7 @@ source("Scripts/Torta IRAG-IRAGe.R", encoding = "UTF-8")
 source("Scripts/casos IRAG e IRAGe po SE.R", encoding = "UTF-8")
 ```
 
-###### Gráfico n° 1: Distribución porcentual de casos notificados por clasificación manual. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+###### *Gráfico n° 1: Distribución porcentual de casos notificados por clasificación manual. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
 
 ```{r}
 torta
@@ -52,7 +52,7 @@ torta
 
 A continuación podemos observar la curva epidemiológica con una notoria distribución estacional de los casos
 
-###### Gráfico n° 2: Distribución temporal de casos notificados por clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+###### *Gráfico n° 2: Distribución temporal de casos notificados por clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
 
 ```{r}
 curva_casos_SE
@@ -67,13 +67,13 @@ source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 
 En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios. A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
 
-###### Gráfico n° 3: Distribución de los casos de IRAGe por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irage`
+###### *Gráfico n° 3: Distribución de los casos de IRAGe por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irage`*
 
 ```{r}
 curva_irage_sex
 ```
 
-###### Gráfico n° 4: Distribución de los casos de IRAG por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irag`
+###### *Gráfico n° 4: Distribución de los casos de IRAG por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irag`*
 
 ```{r}
 curva_irag_sex
@@ -90,7 +90,7 @@ source("Scripts/Comorbilidades IRAGe.R" , encoding = "UTF-8")
 
 La influencia de las comorbilidades en la ocurrencia de casos que IRA que requieren internación es un tema muy presente en la bibliografía. En los `r total_irag` ingresos de IRAG del HINEP durante el año 2025, `r comorb_irag` presentaron alguna comorbilidad.
 
-###### Gráfico n°5:  Registro/presencia de comorbilidades en casos notificados de IRAG. Año 2025. HINEP- Catamarca. N =`r total_irag`
+###### *Gráfico n°5:  Registro/presencia de comorbilidades en casos notificados de IRAG. Año 2025. HINEP- Catamarca. N =`r total_irag`*
 
 ```{r}
 torta_comorbilidades_IRAG
@@ -98,7 +98,7 @@ torta_comorbilidades_IRAG
 
 En la siguiente tabla se puede observar cuales fueron las comorbilidades registradas en los casos clasificados como IRAG.
 
-###### Tabla n°1:  Comorbilidades registradas en casos notificados de IRAG. Año 2025. HINEP- Catamarca.
+###### *Tabla n°1:  Comorbilidades registradas en casos notificados de IRAG. Año 2025. HINEP- Catamarca.*
 
 ```{r}
 tabla_comorb_IRAG
@@ -106,7 +106,7 @@ tabla_comorb_IRAG
 
 En cuanto a los casos de IRAGe, de los `r total_irage` casos, `r comorb_irage` (una proporción menor que en las IRAG) presentaron comorbilidades.
 
-###### Gráfico n°6:  Registro/presencia de comorbilidades en casos notificados de IRAGe. Año 2025. HINEP- Catamarca. N =`r total_irage`
+###### *Gráfico n°6:  Registro/presencia de comorbilidades en casos notificados de IRAGe. Año 2025. HINEP- Catamarca. N =`r total_irage`*
 
 ```{r}
 torta_comorbilidades_IRAGe
@@ -114,7 +114,7 @@ torta_comorbilidades_IRAGe
 
 A continuación, se evidencia que las comorbilidades en IRAGe son diferentes a las de las IRAG.
 
-###### Tabla n°2:  Comorbilidades registradas en casos notificados de IRAGe. Año 2025. HINEP- Catamarca.
+###### *Tabla n°2:  Comorbilidades registradas en casos notificados de IRAGe. Año 2025. HINEP- Catamarca.*
 
 ```{r}
 tabla_comorb_IRAGE
@@ -129,13 +129,13 @@ source("Scripts/Diagnosticos en IRAGe.R" , encoding = "UTF-8")
 
 La clasificación de IRAG e IRAGe no son en si mismas un diagnóstico, sino un criterio epidemiológico de inclusión a la Unidad Centinela. Se pueden observar diferencias en los diagnósticos registrados al ingreso de cada caso, según la Clasificación asignada.
 
-###### Tabla n°4:  Diagnósticos al ingreso en casos notificados de IRAG. Año 2025. HINEP- Catamarca.
+###### *Tabla n°4:  Diagnósticos al ingreso en casos notificados de IRAG. Año 2025. HINEP- Catamarca*.
 
 ```{r}
 tabla_dx_IRAG
 ```
 
-###### Tabla n°5:  Diagnósticos al ingreso en casos notificados de IRAGe. Año 2025. HINEP- Catamarca
+###### *Tabla n°5:  Diagnósticos al ingreso en casos notificados de IRAGe. Año 2025. HINEP- Catamarca*
 
 ```{r}
 tabla_DX_IRAGe
@@ -148,10 +148,52 @@ Cabe aclarar que en la categoría "Otros Diagnósticos" no permite ingresar en e
 ```{r}
 source("Scripts/virus por se.R" , encoding = "UTF-8")
 ```
+
 A todos los ingresos de la UC IRAG se les toma una muestra para identificar, mediante pruebas moleculares (PCR), la infección por virus Influenza, Sars-Cov-2 o Virus Sincicial Respiratorio (VSR). A continuación se detallan los resultados.
 
-###### Gráfico n° 7: Resultados de las determinaciones en para Virus respiratorios, según SE de ingreso. Año 2025 . HINEP - Catamarca. N= `r total_casos`
+###### *Gráfico n° 7: Resultados de las determinaciones para Virus respiratorios, según SE de ingreso. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
+
 ```{r}
 grafico_virus
 ```
 
+## TRATAMIENTO: REQUERIMIENTO DE OXÍGENO
+
+```{r}
+source("Scripts/severidad.R" , encoding = "UTF-8")
+```
+
+Como indicador indirecto de la severidad de la dificultad respiratoria, en el siguiente gráfico se mustra la proporción de casos con requerimiento de Oxígeno por CAFO (Cánula de Alto Flujo) y/o VM (Ventilación mecánica), Oxígeno de Bajo flujo, o sin requerimiento de oxígeno.
+
+###### *Gráfico n° 8: Requerimiento de Oxígeno (O2), según Clafisicación del caso. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
+
+```{r}
+severidad_grafico
+```
+
+## MORTALIDAD
+
+No se registraron fallecidos dentro de los ingresos de UC IRAG en el año 2025.
+
+## ANTECEDENTES DE VACUNACIÓN EN CASOS DE UC IRAG
+
+```{r}
+source("Scripts/grafico madres vacunadas 14-05.R" , encoding = "UTF-8")
+source("Scripts/torta vacuna antigripal.R" , encoding = "UTF-8")
+```
+
+En los menores de 6 meses, se evaluó la proporción de madres que contaban con vacunación para Influenza y para Virus Sincicial Respiratorio. Los resultados se pueden observar a continuación:
+
+###### *Gráfico n° 9: Estado de vacunación para Influenza y VSR en las madres de los casos de menores de 6 meses. Año 2025 . HINEP - Catamarca. N= `r menores_6m`*
+
+```{r}
+vacunas_madres_grafico
+```
+
+En cuanto a los casos de 6 a 23 meses, se constató la colocación de la vacuna antigripal según el calendario nacional. El siguiente gráfico muestra los resultados. 
+
+###### *Gráfico n° 10: Estado de vacunación para Influenza en los casos de UC IRAG con edades entre 6 y 23 meses. Año 2025 . HINEP - Catamarca. N= `r CASOS6m_23m`*
+
+```{r}
+torta2
+```

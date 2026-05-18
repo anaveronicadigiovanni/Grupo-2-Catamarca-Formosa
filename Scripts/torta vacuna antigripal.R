@@ -2,7 +2,8 @@
 # FILTRO NIÑOS DE 6 A 23 MESES
 VACUNA_ANTIGRIPAL<- data %>% filter(EDAD_UC_IRAG %in% c("6 a 11 Meses", "12 a 23 Meses"))
 
-
+#Objeto para total de niños de 6 a 23 meses
+CASOS6m_23m <-nrow(VACUNA_ANTIGRIPAL)
 
 # 1. Preparamos los datos 
 data_grafico <- VACUNA_ANTIGRIPAL %>% 

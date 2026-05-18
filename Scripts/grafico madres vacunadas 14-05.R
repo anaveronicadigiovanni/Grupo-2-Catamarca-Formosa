@@ -2,6 +2,8 @@
 #1 filtro niños menores de 6 meses
 NIÑOS_MENORES_6_MESES<- data %>% filter(EDAD_UC_IRAG %in% c("0 a 2 Meses", "3 a 5 Meses"))
 
+####objeto para ver total de menores de 6 meses
+menores_6m <-nrow(NIÑOS_MENORES_6_MESES)
 
 #2 Creo data frame para grafico de madres vacunadas en menores de 6 meses###
 
