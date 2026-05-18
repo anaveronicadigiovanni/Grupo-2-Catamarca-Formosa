@@ -29,7 +29,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
 # 2. Armamos el gráfico
 vacunas_madres_grafico<- highchart() %>%
   hc_chart(type = "column") %>%
-  hc_title(text = "Vacunación Materna en niños menores de 6 meses") %>%
+ # hc_title(text = "Vacunación Materna en niños menores de 6 meses") %>%
   hc_plotOptions(column = list(
     stacking = "percent", 
     borderWidth = 0
