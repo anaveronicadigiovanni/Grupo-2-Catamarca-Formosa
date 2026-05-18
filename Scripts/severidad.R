@@ -14,7 +14,7 @@ tabla_severidad <- Severidad %>%
 # 2. Construcción del gráfico
 severidad_grafico <- highchart() %>%
   hc_chart(type = "column") %>%
-  hc_title(text = "Severidad según Requerimiento de O2 de Casos IRAG/IRAGe. Año 2025") %>%
+ # hc_title(text = "Severidad según Requerimiento de O2 de Casos IRAG/IRAGe. Año 2025") %>%
   hc_plotOptions(column = list(
     stacking = "percent", # <--- Cambia "normal" por "percent"
     pointPadding = 0.1,   
