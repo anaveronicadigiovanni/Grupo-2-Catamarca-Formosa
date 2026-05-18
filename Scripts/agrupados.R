@@ -44,7 +44,7 @@
     ) %>%
     # Define aquí tus colores (puedes usar nombres o códigos Hex)
     # Cambia el orden según cuál serie quieres que sea gris
-    hc_colors(c("#7cb5ec", "#434399","#D3D3D3" )) %>% 
+    hc_colors(c("#8cccd3", "#00a3d1","#D3D3D0" )) %>% 
     #hc_title(text = "Proporción de IRAG e IRAG Extendida sobre el Total de Internados") %>%
     hc_xAxis(title = list(text = "Semana Epidemiológica")) %>%
     hc_yAxis(title = list(text = "Porcentaje (%)"), max = 100) %>%
