@@ -34,6 +34,6 @@ torta2<-highchart() %>%
       )
     )
   ) %>%
-  hc_title(text = "Niños de 6 a 23 meses con vacunación antigripal. HINEP. Año 2025") %>%
+  #hc_title(text = "Niños de 6 a 23 meses con vacunación antigripal. HINEP. Año 2025") %>%
   hc_tooltip(pointFormat = "<b>{point.y}</b> casos<br/>{point.percentage:.1f}%")
 torta2
