@@ -23,7 +23,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
   group_by(Vacuna, Estado) %>%
   summarise(n = n(), .groups = "drop") %>%
   mutate(Vacuna = case_when(
-    Vacuna == "VACUNA_VRS" ~ "Vacuna VRS",
+    Vacuna == "VACUNA_VRS" ~ "Vacuna VSR",
     Vacuna == "VAC_ANTIG_MATERNA" ~ "Vacuna Antigripal",
     TRUE ~ Vacuna
   ))
