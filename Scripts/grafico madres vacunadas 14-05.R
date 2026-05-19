@@ -23,7 +23,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
   group_by(Vacuna, Estado) %>%
   summarise(n = n(), .groups = "drop") %>%
   mutate(Vacuna = case_when(
-    Vacuna == "VACUNA_VRS" ~ "Vacuna VRS",
+    Vacuna == "VACUNA_VRS" ~ "Vacuna VSR",
     Vacuna == "VAC_ANTIG_MATERNA" ~ "Vacuna Antigripal",
     TRUE ~ Vacuna
   ))
@@ -31,7 +31,7 @@ tabla_grafico <- NIÑOS_MENORES_6_MESES %>%
 # 2. Armamos el gráfico
 vacunas_madres_grafico<- highchart() %>%
   hc_chart(type = "column") %>%
- # hc_title(text = "Vacunación Materna en niños menores de 6 meses") %>%
+  #hc_title(text = "Vacunación Materna en niños menores de 6 meses. HINEP. Año 2025") %>%
   hc_plotOptions(column = list(
     stacking = "percent", 
     borderWidth = 0
@@ -59,7 +59,9 @@ vacunas_madres_grafico<- highchart() %>%
   hc_add_series(
     data = (tabla_grafico %>% filter(Estado == "sin dato"))$n, 
     name = "Sin Dato", color = "#fc4f59"
-  )
+  )%>%
+  hc_credits(text = "Fuente: Elaboración propia en base a datos del SNVS 2.0", 
+             enabled = TRUE)
 #ver grafico
 
 vacunas_madres_grafico
