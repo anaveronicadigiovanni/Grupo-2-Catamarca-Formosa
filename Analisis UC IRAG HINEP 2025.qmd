@@ -35,7 +35,7 @@ Una Unidad Centinela (UC) brinda un importante flujo de datos, con gran calidad 
 
 [^1]: [***Definiciones de Caso***]{.underline}: \* **Infección Respiratoria Aguda Grave (IRAG):** Paciente de cualquier edad con infección respiratoria aguda con: \* Fiebre referida o constatada \>= 38°C y Tos; y \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **Infección Respiratoria Aguda Grave (IRAG) extendida en \< 2 años y \>= 60 años:** Infección respiratoria: definida por tos o dificultad respiratoria; e \* Inicio del cuadro en los 10 días precedentes; y \* Requerimiento de internación por criterio clínico. \* **En lactantes menores de 6 meses también considerar:** \* Apnea (cese temporal de la respiración por cualquier causa). \* Sepsis (fiebre/hipotermia y shock y gravemente enfermo sin causa aparente).
 
-En 2025 se notificaron `r total_casos` casos que cumplieron con la definición para ser incluidos en la UC IRAG, `r total_irag` de IRAG y `r total_irage` de IRAGe.
+En 2025 se notificaron *`r total_casos`* casos que cumplieron con la definición para ser incluidos en la UC IRAG, *`r total_irag`* de IRAG y *`r total_irage`* de IRAGe.
 
 ```{r}
 source("Scripts/Torta IRAG-IRAGe.R", encoding = "UTF-8")
@@ -50,7 +50,7 @@ torta
 
 ### Casos según Semana Epidemiológica y clasificación
 
-A continuación podemos observar la curva epidemiológica con una notoria distribución estacional de los casos
+A continuación podemos observar la curva epidemiológica, con una notoria distribución estacional de los casos.
 
 ###### *Gráfico n° 2: Distribución temporal de casos notificados por clasificación manual y SE. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
 
@@ -65,7 +65,7 @@ source("Scripts/irag por grupo de edad.R" , encoding = "UTF-8")
 source("Scripts/irage por grupo de edad.R", encoding = "UTF-8")
 ```
 
-En los casos de notificados como IRAGe , se puede observar un predominio de población masculina en todos los grupos etarios. A diferencia de los casos de IRAG, donde la tendencia es hacia la paridad entre ambos sexos o ligero predominio femenino, excepto en los grupos de 0 a 2 meses y de 02 a 04 años.
+El perfil por sexo muestra un comportamiento disímil entre ambas categorías. En los registros de IRAGe, la población masculina predomina de forma constante en todos los rangos de edad analizados. Por el contrario, en la casuística general de IRAG se observa una tendencia hacia la equidad de género o una leve prevalencia femenina, revirtiéndose este patrón únicamente en los lactantes de 0 a 2 meses y en el grupo de 02 a 04 años, donde los casos masculinos son superiores.
 
 ###### *Gráfico n° 3: Distribución de los casos de IRAGe por grupo etario y sexo. Año 2025.HINEP-Catamarca. N=`r total_irage`*
 
@@ -88,7 +88,7 @@ source("Scripts/Comorbilidades IRAG.R" , encoding = "UTF-8")
 source("Scripts/Comorbilidades IRAGe.R" , encoding = "UTF-8")
 ```
 
-La influencia de las comorbilidades en la ocurrencia de casos que IRA que requieren internación es un tema muy presente en la bibliografía. En los `r total_irag` ingresos de IRAG del HINEP durante el año 2025, `r comorb_irag` presentaron alguna comorbilidad.
+El impacto de las comorbilidades en el desarrollo de cuadros de Infección Respiratoria Aguda (IRA) con requerimiento de internación se encuentra ampliamente documentado en la literatura científica.  En los *`r total_irag`* ingresos de IRAG del HINEP durante el año 2025, *`r comorb_irag`* presentaron alguna comorbilidad.
 
 ###### *Gráfico n°5:  Registro/presencia de comorbilidades en casos notificados de IRAG. Año 2025. HINEP- Catamarca. N =`r total_irag`*
 
@@ -127,7 +127,7 @@ source("Scripts/Diagnosticos en IRAG.R" , encoding = "UTF-8")
 source("Scripts/Diagnosticos en IRAGe.R" , encoding = "UTF-8")
 ```
 
-La clasificación de IRAG e IRAGe no son en si mismas un diagnóstico, sino un criterio epidemiológico de inclusión a la Unidad Centinela. Se pueden observar diferencias en los diagnósticos registrados al ingreso de cada caso, según la Clasificación asignada.
+Es importante señalar que las categorías de IRAG e IRAGe no constituyen diagnósticos clínicos en sí mismas, sino criterios epidemiológicos de inclusión para la Unidad Centinela. No obstante, al analizar los diagnósticos registrados al ingreso de cada paciente, se evidencian variaciones significativas según la clasificación asignada.
 
 ###### *Tabla n°4:  Diagnósticos al ingreso en casos notificados de IRAG. Año 2025. HINEP- Catamarca*.
 
@@ -141,7 +141,7 @@ tabla_dx_IRAG
 tabla_DX_IRAGe
 ```
 
-Cabe aclarar que en la categoría "Otros Diagnósticos" no permite ingresar en el SNVS de cuales se trata. En el caso de la UC IRAG del HINEP, en gran parte corresponden a **SBOR** (Sindrome Bronquial Obstructivo Recurrente) y a **SDRA** (Sindrome de distress respiratorio agudo).
+Es necesario señalar que el sistema de registro del SNVS no desglosa las condiciones incluidas bajo el apartado 'Otros diagnósticos'. En lo que respecta a la casuística de la UC IRAG del HINEP, dicha categoría se compone mayoritariamente por cuadros de *SBOR* (Síndrome Bronquial Obstructivo Recurrente) y *SDRA* (Síndrome de Distress Respiratorio Agudo).
 
 ## RESULTADOS DE LAS DETERMINACIONES PARA VIRUS RESPIRATORIOS
 
@@ -163,7 +163,7 @@ grafico_virus
 source("Scripts/severidad.R" , encoding = "UTF-8")
 ```
 
-Como indicador indirecto de la severidad de la dificultad respiratoria, en el siguiente gráfico se mustra la proporción de casos con requerimiento de Oxígeno por CAFO (Cánula de Alto Flujo) y/o VM (Ventilación mecánica), Oxígeno de Bajo flujo, o sin requerimiento de oxígeno.
+El siguiente gráfico analiza el requerimiento de oxígeno como indicador indirecto de la gravedad respiratoria. Se detalla la proporción de pacientes sin soporte, con oxígeno de bajo flujo, o con necesidad de soporte avanzado (CAFO y/o VM).
 
 ###### *Gráfico n° 8: Requerimiento de Oxígeno (O2), según Clafisicación del caso. Año 2025 . HINEP - Catamarca. N= `r total_casos`*
 
@@ -182,7 +182,7 @@ source("Scripts/grafico madres vacunadas 14-05.R" , encoding = "UTF-8")
 source("Scripts/torta vacuna antigripal.R" , encoding = "UTF-8")
 ```
 
-En los menores de 6 meses, se evaluó la proporción de madres que contaban con vacunación para Influenza y para Virus Sincicial Respiratorio. Los resultados se pueden observar a continuación:
+Con respecto a la población de menores de 6 meses, se relevó la cobertura de vacunación materna contra Influenza y Virus Sincicial Respiratorio (VSR). El estado de inmunización de las madres se presenta en el siguiente gráfico:
 
 ###### *Gráfico n° 9: Estado de vacunación para Influenza y VSR en las madres de los casos de menores de 6 meses. Año 2025 . HINEP - Catamarca. N= `r menores_6m`*
 
@@ -190,18 +190,20 @@ En los menores de 6 meses, se evaluó la proporción de madres que contaban con 
 vacunas_madres_grafico
 ```
 
-En cuanto a los casos de 6 a 23 meses, se constató la colocación de la vacuna antigripal según el calendario nacional. El siguiente gráfico muestra los resultados.
+Respecto a la población de 6 a 23 meses, se relevó la colocación de la vacuna antigripal conforme a los lineamientos del Calendario Nacional de Vacunación. La distribución del estado de inmunización para este grupo etario se expone en el siguiente gráfico:
 
 ###### *Gráfico n° 10: Estado de vacunación para Influenza en los casos de UC IRAG con edades entre 6 y 23 meses. Año 2025 . HINEP - Catamarca. N= `r CASOS6m_23m`*
 
 ```{r}
 torta2
 ```
+## PROPORCIÓN DE CASOS DE UC IRAG EN LA INTERNACIÓN
 
-
+Con el propósito de evaluar el impacto estacional de los ingresos de UC IRAG sobre la ocupación institucional, en el siguiente gráfico se analiza la evolución temporal de los ingresos. Se detalla, de manera semanal, la proporción que representan los casos de IRAG e IRAG extendida en relación al universo total de pacientes internados por todas las causas en el HINEP durante el año 2025.
 ```{r}
 source("Scripts/agrupados.R" , encoding = "UTF-8")
 ```
+###### Gráfico nº 11: Distribución porcentual de internaciones por IRAG e IRAG extendida respecto al total de pacientes internados, según Semana Epidemiológica. Año 2025. HINEP-Catamarca
 ```{r}
   Grafico_agrupados
 ```
