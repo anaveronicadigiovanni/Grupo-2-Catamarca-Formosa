@@ -100,7 +100,7 @@ curva_irage_sex
 curva_irag_sex
 ```
 
-## COMORBILIDADES en CASOS DE UC IRAG
+## COMORBILIDADES EN CASOS DE UC IRAG
 
 ```{r}
 source("Scripts/PRESENCIA O NO COMORBILIDADES IRAG.R" , encoding = "UTF-8")
