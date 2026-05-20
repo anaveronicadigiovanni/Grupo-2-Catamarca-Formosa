@@ -1,7 +1,7 @@
 #####AGRUPAMOS por virus y Semana############
 
  VIRUS_SE_TABLA<-data |>
-   group_by(FLU,VRS, SARS_COV_2,SEPI_FECHA_INTER)%>%
+   group_by(Influenza,VSR, SARS_CoV_2,SEPI_FECHA_INTER)%>%
   summarise(CASOS = n())%>%
    ungroup()
  
@@ -20,38 +20,38 @@
                                                     pad = "0")) #número que se utilizará para "completar"
  
 
-  # # 1. Procesar los datos para calcular % de positividad
-  VIRUS_SE <- VIRUS_SE_TABLA %>%
-    # Pasamos a formato largo para manejar los 3 virus a la vez
-    pivot_longer(
-      cols = c(FLU, VRS, SARS_COV_2),
-      names_to = "Virus",
-      values_to = "Resultado"
-    ) %>%
-    group_by(SE, Virus) %>%
-    summarise(
-      # Sumamos las muestras totales de la semana
-      Total_Muestras = sum(CASOS, na.rm = TRUE),
-      # Sumamos solo donde el resultado sea POSITIVO (ignorando mayúsculas/minúsculas)
-      Positivos = sum(CASOS[toupper(Resultado) == "POSITIVO" | Resultado == "SARSCov 2"], na.rm = TRUE),
-      .groups = "drop"
-    ) %>%
-    # Calculamos el porcentaje
-    mutate(Porcentaje = round((Positivos / Total_Muestras) * 100, 2))
-
-
-  #2. Crear el gráfico de líneas
-  Grafico_virus<- hchart(  VIRUS_SE , "line", hcaes(x = SE, y = Porcentaje, group = Virus)) %>%
-    hc_title(text = "Porcentaje de Positividad de Virus Respiratorios por Semana Epidemiológica en UCIRAG. HINEP 2025.") %>%
-    hc_yAxis(title = list(text = "Positividad (%)"), min = 0, max = 100) %>%
-    hc_xAxis(title = list(text = "Semana Epidemiológica (SE)")) %>%
-    hc_tooltip(shared = TRUE, valueSuffix = "%") %>%
-    hc_add_theme(hc_theme_smpl())
-
-  ###LLAMO GRAFICO
-  Grafico_virus
-  
-  
+  # # # 1. Procesar los datos para calcular % de positividad
+  # VIRUS_SE <- VIRUS_SE_TABLA %>%
+  #   # Pasamos a formato largo para manejar los 3 virus a la vez
+  #   pivot_longer(
+  #     cols = c(Influenza,VSR, SARS_CoV_2),
+  #     names_to = "Virus",
+  #     values_to = "Resultado"
+  #   ) %>%
+  #   group_by(SE, Virus) %>%
+  #   summarise(
+  #     # Sumamos las muestras totales de la semana
+  #     Total_Muestras = sum(CASOS, na.rm = TRUE),
+  #     # Sumamos solo donde el resultado sea POSITIVO (ignorando mayúsculas/minúsculas)
+  #     Positivos = sum(CASOS[toupper(Resultado) == "POSITIVO" | Resultado == "SARSCov 2"], na.rm = TRUE),
+  #     .groups = "drop"
+  #   ) %>%
+  #   # Calculamos el porcentaje
+  #   mutate(Porcentaje = round((Positivos / Total_Muestras) * 100, 2))
+  # 
+  # 
+  # #2. Crear el gráfico de líneas
+  # Grafico_virus<- hchart(  VIRUS_SE , "line", hcaes(x = SE, y = Porcentaje, group = Virus)) %>%
+  #   hc_title(text = "Porcentaje de Positividad de Virus Respiratorios por Semana Epidemiológica en UCIRAG. HINEP 2025.") %>%
+  #   hc_yAxis(title = list(text = "Positividad (%)"), min = 0, max = 100) %>%
+  #   hc_xAxis(title = list(text = "Semana Epidemiológica (SE)")) %>%
+  #   hc_tooltip(shared = TRUE, valueSuffix = "%") %>%
+  #   hc_add_theme(hc_theme_smpl())
+  # 
+  # ###LLAMO GRAFICO
+  # Grafico_virus
+  # 
+  # 
   ############################################################################  
   
   
