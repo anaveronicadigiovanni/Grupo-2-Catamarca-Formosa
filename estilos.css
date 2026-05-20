@@ -1,0 +1,80 @@
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+
+  /* Colores principales */
+  --color-primary-1: #222A59;
+  --color-primary-2: #405CA4;
+  --color-primary-3: #64A1D5;
+  
+  /* Colores secundarios */
+  --color-secondary-1: #CBD03E;
+  --color-secondary-2: #65A8A3;
+  --color-secondary-3: #807DA8;
+  --color-secondary-4: #C8217E;
+  --color-secondary-5: #DE80AF;
+
+  --primary-font: 'Open Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--color-white);
+  font-family: var(--primary-font);
+  color: var(--color-secondary-3);
+}
+
+h1 {
+  color:var(--color-primary-1) ;
+  text-align: center;
+  font-size: 1.7em;
+}
+
+h2 {
+  color: var(--color-primary-3);
+  text-align: left;
+  font-size: 1.4em;
+}
+
+h3 {
+  color: var(--color-primary-3);
+  text-align: left;
+  font-size: 1.2em;
+  padding-bottom: 15px;
+}
+
+p {
+  color: var(--color-black);
+  font-size: 1em;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+a {
+  color: var(--color-primary-2);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--color-primary-3);
+  text-decoration: underline;
+}
+
+/*Modificaciones en el índice*/
+.sidebar nav#TOC .toc-title {
+  color: var(--color-black) !important;
+}
+
+.sidebar nav#TOC {
+  position: sticky;        
+  top: 100px;  
+}
+
+/* Color normal de los items del índice */
+.sidebar nav#TOC a {
+  color: var(--color-black) !important;
+}
+
+/* Color al pasar el mouse */
+.sidebar nav#TOC a:hover {
+  color: var(--color-primary-2) !important;
+}
+
