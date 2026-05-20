@@ -65,14 +65,14 @@ table(data$OTRO_DX)
 ############################################################
 ###crear columna de analisis de Vac Antigripal
 
-data <- data %>% mutate(VACANTIGRIPAL="NO")
-data <-data %>%  
-  mutate(VACANTIGRIPAL = if_else( EDAD_UC_IRAG == "6 a 11 Meses"| EDAD_UC_IRAG == "12 a 23 Meses", case_when(
-    VAC_ANTIGRIPAL == "CONSTATADA" ~ " CONSTATADA",
-    VAC_ANTIGRIPAL == "NO VACUNADO" ~ " NO VACUNADO",
-    VAC_ANTIGRIPAL == "SIN DATO" ~ " SIN DATO",
-    VAC_ANTIGRIPAL == "REFERIDA" ~ " REFERIDA",
-    TRUE ~ "etc" ), "NO CORRESPONDE"))
+# data <- data %>% mutate(VACANTIGRIPAL="NO")
+# data <-data %>%  
+#   mutate(VACANTIGRIPAL = if_else( EDAD_UC_IRAG == "6 a 11 Meses"| EDAD_UC_IRAG == "12 a 23 Meses", case_when(
+#     VAC_ANTIGRIPAL == "CONSTATADA" ~ " CONSTATADA",
+#     VAC_ANTIGRIPAL == "NO VACUNADO" ~ " NO VACUNADO",
+#     VAC_ANTIGRIPAL == "SIN DATO" ~ " SIN DATO",
+#     VAC_ANTIGRIPAL == "REFERIDA" ~ " REFERIDA",
+#     TRUE ~ "etc" ), "NO CORRESPONDE"))
 
 
 #UNIFICAMOS VACUNA ANTIGRIPAL CONSTATADA Y REFERIDA COMO VACUNA ANTIGRIPAL VACU
@@ -138,26 +138,26 @@ table(data$VRS)
 
 
 ####UNIFICO FLU####
-
-data <- data %>%
-  mutate(FLU = case_match(INFLUENZA_FINAL,
-                          
-                          "Influenza A (sin subtipificar)"~ "POSITIVO",
-                          "	Influenza A H1N1"~ "POSITIVO",
-                          "Influenza B (sin linaje)"~ "POSITIVO",
-                          "Influenza B Victoria"~ "POSITIVO",
-                          "Negativo"~ "Negativo",                                                
-                          "Sin resultado"~ "Negativo",
-                          .default = "Negativo" ))
-
-####unifico SARSCov 2#####
-
-data <- data %>%
-  mutate(SARS_COV_2 = case_match(COVID_19_FINAL,
-                                 "Positivo" ~ "POSITIVO",
-                                 "Negativo" ~ "Negativo",
-                                 "Sin resultado" ~ "Negativo",
-                                  .default = "Negativo" ))
+# 
+# data <- data %>%
+#   mutate(FLU = case_match(INFLUENZA_FINAL,
+#                           
+#                           "Influenza A (sin subtipificar)"~ "POSITIVO",
+#                           "	Influenza A H1N1"~ "POSITIVO",
+#                           "Influenza B (sin linaje)"~ "POSITIVO",
+#                           "Influenza B Victoria"~ "POSITIVO",
+#                           "Negativo"~ "Negativo",                                                
+#                           "Sin resultado"~ "Negativo",
+#                           .default = "Negativo" ))
+# 
+# ####unifico SARSCov 2#####
+# 
+# data <- data %>%
+#   mutate(SARS_COV_2 = case_match(COVID_19_FINAL,
+#                                  "Positivo" ~ "POSITIVO",
+#                                  "Negativo" ~ "Negativo",
+#                                  "Sin resultado" ~ "Negativo",
+#                                   .default = "Negativo" ))
 ####################################################################################
 
 data <- data %>%

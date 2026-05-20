@@ -54,3 +54,10 @@ total_irag <- sum(data$CLASIFICACION_MANUAL == "Infección respiratoria aguda gr
 ####total de casos de IRAGe#
 
 total_irage <- sum(data$CLASIFICACION_MANUAL == "IRAG extendida", na.rm = TRUE)
+
+################Filtro agrupados ################
+####SACO LOS DE 15 O MÄS AÑOS, los de 2024 y 2026 y los de SE53###
+
+AGRUPADOS <- AGRUPADOS %>% 
+  filter(SEMANA < 53 & ANIO == 2025) %>% 
+  select(-`15 a 19 años`)
