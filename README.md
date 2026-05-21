@@ -1,20 +1,17 @@
 # Grupo-2-Catamarca-Formosa
-Automatización de Reportes Epidemiológicos: UC-IRAG Catamarca Hospital de Niños Eva Perón
+*Automatización de Reportes Epidemiológicos: UC-IRAG Catamarca Hospital de Niños Eva Perón*
 
 Este repositorio contiene el proyecto de análisis automatizado de datos derivados de la Estrategia de Vigilancia en Unidades Centinela de Infección Respiratoria Aguda Grave (UC-IRAG)  implementada en la población pediátrica de la provincia de Catamarca.
 El objetivo principal es la organización, procesamiento y análisis reproducible de la información nominal y agrupada disponible, aportando datos de calidad y robustez para la toma de decisiones sanitarias por parte de los equipos de salud 
 
 Alcance e Implementación
 Establecimiento: Hospital Interzonal de Niños "Eva Perón" (HINEP), situado en la ciudad capital de San Fernando del Valle de Catamarca (único nosocomio con UC-IRAG en la provincia).
-
 Dirección del Proyecto: Área de Vigilancia Epidemiológica de la Dirección Provincial de Epidemiología de Catamarca.
-
 Población de Estudio: Pacientes pediátricos internados de 1 mes a 14 años de edad .
-
 Periodo de Análisis: Semana Epidemiológica (SE) 1 a SE 52 del año 2025 (correspondiente a la etapa consolidada tras la prueba piloto de 2024) 
 
 Objetivos del Análisis
-Perfil Clínico y Epidemiológico:
+Perfil Clínico y Epidemiológico:/ 
 Describir la distribución de los casos de IRAG e IRAGe según grupo etario, sexo y diagnóstico de ingreso (Bronquiolitis, Neumonía, Sepsis, Shock o Otros).
 Evolución Temporal: Analizar la curva epidémica de las internaciones mediante semanas epidemiológicas.
 Etiología Viral: Identificar el patrón de ocurrencia, estacionalidad y carga absoluta de virus respiratorios (VSR, Influenza y SARS-CoV-2) identificados por PCR.
