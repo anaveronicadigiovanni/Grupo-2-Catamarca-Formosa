@@ -30,9 +30,9 @@ El objetivo principal es la organización, procesamiento y análisis reproducibl
 
 ## 📁 Contenido del Repositorio
 
-* `DOCUMENTACION/`: Plan de análisis metodológico y mapa del circuito de datos de la Dirección de Epidemiología.  
-* `SCRIPTS/`: Archivos de código en R para la importación, limpieza activa, codificación de nuevas variables y procesamiento estadístico.  
-* `TEMPLATES/`: Estilos CSS, logos institucionales del Ministerio de Salud de Catamarca y encabezados para los reportes.  
+*  Plan de análisis metodológico y mapa del circuito de datos de la Dirección de Epidemiología.  
+* `Scripts/`: Archivos de código en R para la importación, limpieza activa, codificación de nuevas variables y procesamiento estadístico.  
+* `Plantillas e Imagenes/`: Estilos CSS, logos institucionales del Ministerio de Salud de Catamarca y encabezados para los reportes.  
 * `Reporte_UC_IRAG_Catamarca.qmd`: Archivo Quarto maestro que integra el encabezado YAML, texto enriquecido y los chunks de R para la automatización.  
 
 ---
