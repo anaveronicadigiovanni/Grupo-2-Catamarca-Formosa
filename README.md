@@ -23,10 +23,10 @@ Vacunación: Evaluar el estado de vacunación materna (Antigripal y VSR) en meno
 Carga de Enfermedad: Determinar la proporción de ingresos por IRAG/IRAGe sobre el total de internaciones por todas las causas en el HINEP.
 
 📁 Contenido del Repositorio
-DOCUMENTACION/: Plan de análisis metodológico y mapa del circuito de datos de la Dirección de Epidemiología.
-SCRIPTS/: Archivos de código en R para la importación, limpieza activa, codificación de nuevas variables y procesamiento estadístico.
-TEMPLATES/: Estilos CSS, logos institucionales del Ministerio de Salud de Catamarca y encabezados para los reportes.
-Reporte_UC_IRAG_Catamarca.qmd: Archivo Quarto maestro que integra el encabezado YAML, texto enriquecido y los chunks de R para la automatización.
+DOCUMENTACION/: Plan de análisis metodológico y mapa del circuito de datos de la Dirección de Epidemiología.  
+SCRIPTS/: Archivos de código en R para la importación, limpieza activa, codificación de nuevas variables y procesamiento estadístico.  
+TEMPLATES/: Estilos CSS, logos institucionales del Ministerio de Salud de Catamarca y encabezados para los reportes.  
+Reporte_UC_IRAG_Catamarca.qmd: Archivo Quarto maestro que integra el encabezado YAML, texto enriquecido y los chunks de R para la automatización.  
 
 🔒 Política de Confidencialidad de Datos⚠️ IMPORTANTE: Con el fin de garantizar el secreto profesional y cumplir con las normativas vigentes sobre la protección de datos personales y médicos, las bases de datos nominales y agrupadas utilizadas para este análisis no se comparten de manera pública en este repositorio.Para reproducir localmente los elementos de visualización (gráficos de Highcharter/ggplot2, tablas de resumen y mapas del circuito), el usuario institucional deberá incorporar de forma local las siguientes fuentes :
 Base Nominal Uniregistro: Exportación de Vigilancia Nación de UC-IRAG del sistema SNVS 2.0.
@@ -37,6 +37,7 @@ Para ejecutar las herramientas de automatización y renderizar el informe final 
 Rinstall.packages(c("tidyverse", "dplyr", "ggplot2", "lubridate", "stringr", 
                    "readxl", "readr", "writexl", "highcharter", "tidyr", 
                    "leaflet", "gt", "htmltools", "here"))
+                   
 Instrucciones de uso:
 Clonar o descargar este repositorio localmente.
 Abrir el proyecto .Rproj e incluir las bases de datos protegidas en la ruta local correspondiente.
