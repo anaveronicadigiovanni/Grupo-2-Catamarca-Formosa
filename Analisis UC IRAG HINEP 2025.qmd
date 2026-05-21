@@ -204,7 +204,7 @@ source("Scripts/grafico madres vacunadas 14-05.R" , encoding = "UTF-8")
 source("Scripts/torta vacuna antigripal.R" , encoding = "UTF-8")
 ```
 
-Con respecto a la población de menores de 6 meses, se relevó la cobertura de vacunación materna contra Influenza y Virus Sincicial Respiratorio (VSR). El estado de inmunización de las madres se presenta en el siguiente gráfico:
+Con respecto a la población de menores de 6 meses, se relevó la aplicación de vacunación materna contra Influenza y Virus Sincicial Respiratorio (VSR). El estado de inmunización de las madres se presenta en el siguiente gráfico:
 
 ###### *Gráfico n° 9: Estado de vacunación para Influenza y VSR en las madres de los casos de menores de 6 meses. Año 2025 . HINEP - Catamarca. N= `r menores_6m`*
 
@@ -238,17 +238,17 @@ source("Scripts/agrupados.R" , encoding = "UTF-8")
 
 ### **Perfil Epidemiológico y Carga de Enfermedad**
 
-- **Proporción de casos**: La casuística anual constó de 382 pacientes integrados a la UC IRAG . La variante convencional representó el 75% (288 casos) y la modalidad extendida el 25% (94 casos) del universo de notificaciones.
+- **Proporción de casos**: La casuística anual constó de 382 pacientes integrados a la UC IRAG . La variante convencional (IRAG) representó el 75% (288 casos) y la modalidad extendida (IRAGe) el 25% (94 casos) del universo de notificaciones.
 
-- **Distribución por edad y sexo**: Los cuadros de IRAG extendida exhibieron un predominio masculino constante en todos los rangos etarios . En contraste, la IRAG general mostró una paridad de género con leve prevalencia femenina, revirtiéndose a favor de los varones únicamente en lactantes de 0 a 2 meses y en el grupo de 2 a 4 años .
+- **Distribución por edad y sexo**: Los cuadros de IRAG extendida mostraron un predominio masculino constante en todos los rangos etarios . En contraste, la IRAG general mostró una paridad de género con leve prevalencia femenina, revirtiéndose a favor de los varones únicamente en lactantes de 0 a 2 meses y en el grupo de 2 a 4 años .
 
 - **Estacionalidad**: La curva epidémica denotó un marcado patrón de ocurrencia estacional . El volumen crítico de internaciones se concentró temporalmente de manera sincrónica con la actividad de los agentes etiológicos principales .
 
 ### **Perfil Clínico y Frecuencia de Comorbilidades**
 
-- **Comorbilidades en IRAG**: El 50% de los pacientes ingresados presentó al menos una patología de base . El asma (19.1%) y el antecedente de bronquiolitis previa (17.7%) se erigieron como los factores preexistentes más prevalentes.
+- **Comorbilidades en IRAG**: El 50% de los pacientes ingresados presentó al menos una patología de base . El asma (19.1%) y el antecedente de bronquiolitis previa (17.7%) se detacaron como los factores preexistentes más prevalentes.
 
-- **Comorbilidades en IRAG extendida**: Este segmento demostró una menor asociación a patologías de base, registrando un 37% de comorbilidad. Sin embargo, el perfil estuvo liderado por el antecedente de bronquiolitis previa (23.4%) y la prematurez (14.9%) .
+- **Comorbilidades en IRAG extendida**: Este segmento demostró una menor asociación a patologías de base, registrando un 37% de comorbilidad. Sin embargo, el perfil estuvo encabezado por el antecedente de bronquiolitis previa (23.4%) y la prematurez (14.9%) .
 
 - **Diagnósticos de ingreso**: Se constató una marcada divergencia clínica según los criterios de inclusión . Mientras que la IRAG convencional estuvo dominada por la categoría de "Otros diagnósticos" (SBOR y SDRA) con un 56% y neumonía con un 29% , el 68% de las admisiones por IRAG extendida obedeció a cuadros de bronquiolitis .
 
@@ -262,7 +262,7 @@ source("Scripts/agrupados.R" , encoding = "UTF-8")
 
 ### **Gravedad, Mortalidad e Inmunización**
 
-- **Severidad clínica**: El requerimiento de soporte ventilatorio y de oxigenoterapia varió sustancialmente en función de la clasificación epidemiológica asignada, sirviendo como indicador indirecto de la gravedad y de la ocupación de recursos críticos .
+- **Severidad clínica**: El requerimiento de soporte ventilatorio y de oxigenoterapia varió de manera  notoria en función de la clasificación epidemiológica asignada, sirviendo como indicador indirecto de la gravedad y de la ocupación de recursos críticos .
 
 - **Mortalidad institucional**: El análisis determinó una tasa de letalidad del 0% dentro de la cohorte evaluada, no habiéndose registrado ningún fallecimiento entre los pacientes incorporados a la vigilancia de la Unidad Centinela durante el año 2025 .
 
