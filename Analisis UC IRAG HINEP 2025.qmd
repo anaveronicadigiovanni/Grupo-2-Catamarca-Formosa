@@ -3,8 +3,8 @@ title: "Análisis de la Unidad Centinela de Infecciones Respiratorias Agudas Gra
 format: 
  html:
   theme: jeti
-  include-after-body: insert-header.html
-  css: estilos.css # Integrar estilos CSS de archivo externo
+  include-after-body: 'Plantillas e Imagenes/insert-header.html'
+  css: 'Plantillas e Imagenes/estilos.css' # Integrar estilos CSS de archivo externo
   toc: true                # Habilita la tabla de contenidos
   toc-title: "Índice de Contenidos"  # Título del índice
   toc-depth: 6
@@ -42,15 +42,15 @@ Caracterizar el perfil epidemiológico, clínico y la etiología viral de la pob
 
 #### Objetivos Específicos
 
--   Determinar la proporción de casos de IRAG e IRAGe sobre el total de notificaciones.
--   Describir la distribución de los casos de IRAG e IRAGe según grupo etario y sexo.
--   Analizar la curva epidémica de las internaciones por IRAG e IRAGe según semana epidemiológica.
--   Estimar la frecuencia relativa de comorbilidades en IRAG como en IRAGe.
--   Identificar la frecuencia relativa de los diagnósticos de ingreso en los pacientes ingresados por IRAG e IRAGe.
--   Evaluar de manera indirecta la severidad clínica de la dificultad respiratoria mediante la letalidad y el requerimiento de soporte ventilatorio (Oxígeno de bajo flujo, Cánula de Alto Flujo de Oxígeno y/o Asistencia Respiratoria Mecánica).
--   Describir el patrón de ocurrencia viral y la estacionalidad de los agentes etiológicos identificados por PCR.
--   Analizar el estado de vacunación materna (Antigripal y VSR) en pacientes menores de 6 meses, y antecedentes de vacunación propia (Antigripal) en el grupo de 6 a 24 meses.
--   Estimar la carga de enfermedad mediante la proporción de ingresos por IRAG/IRAGe sobre el total de internaciones por todas las causas.
+- Determinar la proporción de casos de IRAG e IRAGe sobre el total de notificaciones.
+- Describir la distribución de los casos de IRAG e IRAGe según grupo etario y sexo.
+- Analizar la curva epidémica de las internaciones por IRAG e IRAGe según semana epidemiológica.
+- Estimar la frecuencia relativa de comorbilidades en IRAG como en IRAGe.
+- Identificar la frecuencia relativa de los diagnósticos de ingreso en los pacientes ingresados por IRAG e IRAGe.
+- Evaluar de manera indirecta la severidad clínica de la dificultad respiratoria mediante la letalidad y el requerimiento de soporte ventilatorio (Oxígeno de bajo flujo, Cánula de Alto Flujo de Oxígeno y/o Asistencia Respiratoria Mecánica).
+- Describir el patrón de ocurrencia viral y la estacionalidad de los agentes etiológicos identificados por PCR.
+- Analizar el estado de vacunación materna (Antigripal y VSR) en pacientes menores de 6 meses, y antecedentes de vacunación propia (Antigripal) en el grupo de 6 a 24 meses.
+- Estimar la carga de enfermedad mediante la proporción de ingresos por IRAG/IRAGe sobre el total de internaciones por todas las causas.
 
 ## CARACTERIZACIÓN DE LOS CASOS
 
@@ -243,8 +243,7 @@ source("Scripts/agrupados.R" , encoding = "UTF-8")
 
 - **Distribución por edad y sexo**: Los cuadros de IRAG extendida mostraron un predominio masculino constante en todos los rangos etarios . En contraste, la IRAG general mostró una paridad de género con leve prevalencia femenina, revirtiéndose a favor de los varones únicamente en lactantes de 0 a 2 meses y en el grupo de 2 a 4 años .
 
-
--   **Estacionalidad**: La curva epidémica denotó un marcado patrón de ocurrencia estacional . El volumen crítico de internaciones se concentró temporalmente de manera sincrónica con la actividad de los agentes etiológicos principales .
+- **Estacionalidad**: La curva epidémica denotó un marcado patrón de ocurrencia estacional . El volumen crítico de internaciones se concentró temporalmente de manera sincrónica con la actividad de los agentes etiológicos principales .
 
 ### **Perfil Clínico y Frecuencia de Comorbilidades**
 
@@ -252,24 +251,22 @@ source("Scripts/agrupados.R" , encoding = "UTF-8")
 
 - **Comorbilidades en IRAG extendida**: Este segmento demostró una menor asociación a patologías de base, registrando un 37% de comorbilidad. Sin embargo, el perfil estuvo encabezado por el antecedente de bronquiolitis previa (23.4%) y la prematurez (14.9%) .
 
-
--   **Diagnósticos de ingreso**: Se constató una marcada divergencia clínica según los criterios de inclusión . Mientras que la IRAG convencional estuvo dominada por la categoría de "Otros diagnósticos" (SBOR y SDRA) con un 56% y neumonía con un 29% , el 68% de las admisiones por IRAG extendida obedeció a cuadros de bronquiolitis .
+- **Diagnósticos de ingreso**: Se constató una marcada divergencia clínica según los criterios de inclusión . Mientras que la IRAG convencional estuvo dominada por la categoría de "Otros diagnósticos" (SBOR y SDRA) con un 56% y neumonía con un 29% , el 68% de las admisiones por IRAG extendida obedeció a cuadros de bronquiolitis .
 
 ### **Vigilancia Virológica y Etiología (PCR)**
 
--   **VSR**: Se consolidó como el principal agente etiológico del año con un comportamiento estacional crítico, correlacionado directamente con el pico de internaciones por bronquiolitis . Su detección formal inició en la SE 23, alcanzando de forma abrupta el pico máximo de positividad y volumen de casos entre las SE 25 y SE 27 .
+- **VSR**: Se consolidó como el principal agente etiológico del año con un comportamiento estacional crítico, correlacionado directamente con el pico de internaciones por bronquiolitis . Su detección formal inició en la SE 23, alcanzando de forma abrupta el pico máximo de positividad y volumen de casos entre las SE 25 y SE 27 .
 
--   **Influenza**: Presentó una menor representatividad cuantitativa global respecto al VSR, pero con una dinámica temporal más extendida y persistente a lo largo del año calendario. Sus detecciones moleculares se registraron de manera sostenida a partir de la SE 13 en adelante, manteniendo presencia continua en el espectro de infecciones graves.
+- **Influenza**: Presentó una menor representatividad cuantitativa global respecto al VSR, pero con una dinámica temporal más extendida y persistente a lo largo del año calendario. Sus detecciones moleculares se registraron de manera sostenida a partir de la SE 13 en adelante, manteniendo presencia continua en el espectro de infecciones graves.
 
--   **SARS-CoV-2**: Registró una dinámica endémica de baja intensidad sin picos de magnitud epidémica en la población pediátrica. Su circulación se detectó de forma esporádica e intermitente desde el inicio del año (SE 01) y se mantuvo presente en cortes específicos de la vigilancia como las SE 03, SE 05 y SE 10 .
+- **SARS-CoV-2**: Registró una dinámica endémica de baja intensidad sin picos de magnitud epidémica en la población pediátrica. Su circulación se detectó de forma esporádica e intermitente desde el inicio del año (SE 01) y se mantuvo presente en cortes específicos de la vigilancia como las SE 03, SE 05 y SE 10 .
 
 ### **Gravedad, Mortalidad e Inmunización**
 
 - **Severidad clínica**: El requerimiento de soporte ventilatorio y de oxigenoterapia varió de manera notoria en función de la clasificación epidemiológica asignada, sirviendo como indicador indirecto de la gravedad y de la ocupación de recursos críticos .
 
+- **Mortalidad institucional**: El análisis determinó una tasa de letalidad del 0% dentro de la cohorte evaluada, no habiéndose registrado ningún fallecimiento entre los pacientes incorporados a la vigilancia de la Unidad Centinela durante el año 2025 .
 
--   **Mortalidad institucional**: El análisis determinó una tasa de letalidad del 0% dentro de la cohorte evaluada, no habiéndose registrado ningún fallecimiento entre los pacientes incorporados a la vigilancia de la Unidad Centinela durante el año 2025 .
+- **Vacunación materna (menores de 6 meses)**: La evaluación de la inmunización de las madres demostró brechas en las coberturas para VSR e Influenza, impactando la transferencia pasiva de anticuerpos en el grupo de lactantes más vulnerables .
 
--   **Vacunación materna (menores de 6 meses)**: La evaluación de la inmunización de las madres demostró brechas en las coberturas para VSR e Influenza, impactando la transferencia pasiva de anticuerpos en el grupo de lactantes más vulnerables .
-
--   **Vacunación propia (6 a 23 meses)**: En los pacientes elegibles para la inmunización antigripal obligatoria por calendario, el 60% contaba con el esquema de vacunación correspondiente, registrándose un 37% de susceptibilidad por falta de dosis .
+- **Vacunación propia (6 a 23 meses)**: En los pacientes elegibles para la inmunización antigripal obligatoria por calendario, el 60% contaba con el esquema de vacunación correspondiente, registrándose un 37% de susceptibilidad por falta de dosis .
