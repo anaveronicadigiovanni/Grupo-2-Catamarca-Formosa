@@ -1,26 +1,37 @@
-:root {
-  --color-black: #000000;
-  --color-white: #ffffff;
+  :root {
+    --color-black: #000000;
+    --color-white: #ffffff;
 
-  /* Colores principales */
-  --color-primary-1: #222A59;
-  --color-primary-2: #405CA4;
-  --color-primary-3: #64A1D5;
-  
-  /* Colores secundarios */
-  --color-secondary-1: #CBD03E;
-  --color-secondary-2: #65A8A3;
-  --color-secondary-3: #807DA8;
-  --color-secondary-4: #C8217E;
-  --color-secondary-5: #DE80AF;
+    /* Colores principales */
+    --color-primary-1: #222A59;
+    --color-primary-2: #405CA4;
+    --color-primary-3: #64A1D5;
 
-  --primary-font: 'Open Sans', Arial, sans-serif;
-}
+    /* Colores secundarios */
+    --color-secondary-1: #CBD03E;
+    --color-secondary-2: #65A8A3;
+    --color-secondary-3: #807DA8;
+    --color-secondary-4: #C8217E;
+    --color-secondary-5: #DE80AF;
 
+    --primary-font: 'Neue Haas Grotesk Display Pro', Arial, sans-serif;
+    --secondary-font: 'Open Sans', Arial, sans-serif;
+  }
+
+  html {
+    box-sizing: border-box;
+  }
+
+  *, *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 body {
   background-color: var(--color-white);
-  font-family: var(--primary-font);
-  color: var(--color-secondary-3);
+  font-family: var(--secondary-font);
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -78,3 +89,35 @@ a:hover {
   color: var(--color-primary-2) !important;
 }
 
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    font-family: var(--primary-font);
+    padding: 1rem;
+    background-color: var(--color-primary-1);
+    width: 100%;
+  }
+
+  .header__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 80%;
+    margin: 0 auto;
+  }
+
+  .header__logo-salud,
+  .header__logo-epidemio {
+    flex: 0 0 auto;
+    max-width: 180px;
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+
+  .header__logo-epidemio {
+    max-width: 360px;
+  }
