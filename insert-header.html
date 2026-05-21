@@ -1,0 +1,17 @@
+<script>
+  // insert-header.js
+  document.addEventListener("DOMContentLoaded", function() {
+    // Buscar el elemento objetivo
+    const quartoContent = document.getElementById("quarto-content");
+    if (!quartoContent) return;
+  
+    // Cargar el contenido del encabezado.html
+    fetch("encabezado.html")
+      .then(response => response.text())
+      .then(html => {
+        // Insertar el HTML justo antes de #quarto-content
+        quartoContent.insertAdjacentHTML("beforebegin", html);
+      })
+      .catch(error => console.error("Error al insertar el encabezado:", error));
+  });
+</script>

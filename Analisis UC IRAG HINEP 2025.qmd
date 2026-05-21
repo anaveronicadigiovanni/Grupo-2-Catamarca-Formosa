@@ -3,6 +3,7 @@ title: "Análisis de la Unidad Centinela de Infecciones Respiratorias Agudas Gra
 format: 
  html:
   theme: jeti
+  include-after-body: insert-header.html
   css: estilos.css # Integrar estilos CSS de archivo externo
   toc: true                # Habilita la tabla de contenidos
   toc-title: "Índice de Contenidos"  # Título del índice
@@ -262,7 +263,7 @@ source("Scripts/agrupados.R" , encoding = "UTF-8")
 
 ### **Gravedad, Mortalidad e Inmunización**
 
-- **Severidad clínica**: El requerimiento de soporte ventilatorio y de oxigenoterapia varió de manera  notoria en función de la clasificación epidemiológica asignada, sirviendo como indicador indirecto de la gravedad y de la ocupación de recursos críticos .
+- **Severidad clínica**: El requerimiento de soporte ventilatorio y de oxigenoterapia varió de manera notoria en función de la clasificación epidemiológica asignada, sirviendo como indicador indirecto de la gravedad y de la ocupación de recursos críticos .
 
 - **Mortalidad institucional**: El análisis determinó una tasa de letalidad del 0% dentro de la cohorte evaluada, no habiéndose registrado ningún fallecimiento entre los pacientes incorporados a la vigilancia de la Unidad Centinela durante el año 2025 .
 
